@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var loginViewModel: LoginViewModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            if  loginViewModel.isLoggedIn {
+                DashboardView()
+                    .navigationBarBackButtonHidden(true)
+            } else {
+                LoginView()
+            }
+        }.onAppear {
+            loginViewModel.checkLogin()
         }
-        .padding()
     }
 }
 

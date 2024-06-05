@@ -11,6 +11,15 @@
 		C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A262C1034670082FE31 /* ContentView.swift */; };
 		C1BF5A292C10346B0082FE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BF5A282C10346B0082FE31 /* Assets.xcassets */; };
 		C1BF5A2C2C10346B0082FE31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BF5A2B2C10346B0082FE31 /* Preview Assets.xcassets */; };
+		C1BF5A412C1036050082FE31 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A402C1036050082FE31 /* User.swift */; };
+		C1BF5A472C1037260082FE31 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A462C1037260082FE31 /* Notification.swift */; };
+		C1BF5A492C10375B0082FE31 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A482C10375B0082FE31 /* NetworkService.swift */; };
+		C1BF5A4B2C1039810082FE31 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A4A2C1039810082FE31 /* DatabaseService.swift */; };
+		C1C25D712C103D5900EB2729 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C25D702C103D5900EB2729 /* LoginViewModel.swift */; };
+		C1C25D732C1041BA00EB2729 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C25D722C1041BA00EB2729 /* DashboardViewModel.swift */; };
+		C1C25D752C10425E00EB2729 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C25D742C10425E00EB2729 /* NotificationViewModel.swift */; };
+		C1C25D772C10435000EB2729 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C25D762C10435000EB2729 /* LoginView.swift */; };
+		C1C25D792C1044C100EB2729 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C25D782C1044C100EB2729 /* DashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		C1BF5A262C1034670082FE31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C1BF5A282C10346B0082FE31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1BF5A2B2C10346B0082FE31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C1BF5A402C1036050082FE31 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C1BF5A462C1037260082FE31 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		C1BF5A482C10375B0082FE31 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C1BF5A4A2C1039810082FE31 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		C1C25D702C103D5900EB2729 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C1C25D722C1041BA00EB2729 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		C1C25D742C10425E00EB2729 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		C1C25D762C10435000EB2729 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C1C25D782C1044C100EB2729 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +69,7 @@
 		C1BF5A232C1034670082FE31 /* SwiftUIWithMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C1BF5A322C1034CB0082FE31 /* modules */,
 				C1BF5A242C1034670082FE31 /* SwiftUIWithMVVMApp.swift */,
 				C1BF5A262C1034670082FE31 /* ContentView.swift */,
 				C1BF5A282C10346B0082FE31 /* Assets.xcassets */,
@@ -65,6 +84,158 @@
 				C1BF5A2B2C10346B0082FE31 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C1BF5A322C1034CB0082FE31 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				C1BF5A422C1036F10082FE31 /* notification */,
+				C1BF5A352C1034E90082FE31 /* dashboard */,
+				C1BF5A342C1034E20082FE31 /* login */,
+				C1BF5A332C1034D70082FE31 /* common */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		C1BF5A332C1034D70082FE31 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				C1BF5A392C10351D0082FE31 /* utils */,
+				C1BF5A382C1035120082FE31 /* localdb */,
+				C1BF5A372C1035060082FE31 /* networking */,
+				C1BF5A362C1034FF0082FE31 /* model */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		C1BF5A342C1034E20082FE31 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				C1BF5A3C2C10353B0082FE31 /* model */,
+				C1BF5A3B2C1035300082FE31 /* viewmodel */,
+				C1BF5A3A2C10352A0082FE31 /* view */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		C1BF5A352C1034E90082FE31 /* dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				C1BF5A3F2C1035510082FE31 /* model */,
+				C1BF5A3E2C10354A0082FE31 /* viewmodel */,
+				C1BF5A3D2C1035410082FE31 /* view */,
+			);
+			path = dashboard;
+			sourceTree = "<group>";
+		};
+		C1BF5A362C1034FF0082FE31 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C1BF5A402C1036050082FE31 /* User.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C1BF5A372C1035060082FE31 /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				C1BF5A482C10375B0082FE31 /* NetworkService.swift */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		C1BF5A382C1035120082FE31 /* localdb */ = {
+			isa = PBXGroup;
+			children = (
+				C1BF5A4A2C1039810082FE31 /* DatabaseService.swift */,
+			);
+			path = localdb;
+			sourceTree = "<group>";
+		};
+		C1BF5A392C10351D0082FE31 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		C1BF5A3A2C10352A0082FE31 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C1C25D762C10435000EB2729 /* LoginView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C1BF5A3B2C1035300082FE31 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				C1C25D702C103D5900EB2729 /* LoginViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		C1BF5A3C2C10353B0082FE31 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C1BF5A3D2C1035410082FE31 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C1C25D782C1044C100EB2729 /* DashboardView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C1BF5A3E2C10354A0082FE31 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				C1C25D722C1041BA00EB2729 /* DashboardViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		C1BF5A3F2C1035510082FE31 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C1BF5A422C1036F10082FE31 /* notification */ = {
+			isa = PBXGroup;
+			children = (
+				C1BF5A452C10370E0082FE31 /* viewmodel */,
+				C1BF5A442C10370A0082FE31 /* view */,
+				C1BF5A432C1037040082FE31 /* model */,
+			);
+			path = notification;
+			sourceTree = "<group>";
+		};
+		C1BF5A432C1037040082FE31 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C1BF5A462C1037260082FE31 /* Notification.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C1BF5A442C10370A0082FE31 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C1BF5A452C10370E0082FE31 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				C1C25D742C10425E00EB2729 /* NotificationViewModel.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +308,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1BF5A4B2C1039810082FE31 /* DatabaseService.swift in Sources */,
+				C1BF5A492C10375B0082FE31 /* NetworkService.swift in Sources */,
+				C1BF5A472C1037260082FE31 /* Notification.swift in Sources */,
 				C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */,
 				C1BF5A252C1034670082FE31 /* SwiftUIWithMVVMApp.swift in Sources */,
+				C1C25D752C10425E00EB2729 /* NotificationViewModel.swift in Sources */,
+				C1C25D792C1044C100EB2729 /* DashboardView.swift in Sources */,
+				C1BF5A412C1036050082FE31 /* User.swift in Sources */,
+				C1C25D712C103D5900EB2729 /* LoginViewModel.swift in Sources */,
+				C1C25D772C10435000EB2729 /* LoginView.swift in Sources */,
+				C1C25D732C1041BA00EB2729 /* DashboardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
