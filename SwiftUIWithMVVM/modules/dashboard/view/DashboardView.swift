@@ -12,9 +12,28 @@ struct DashboardView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack {
-                    Text("V")
+            ZStack {
+                Color(.lightGray).ignoresSafeArea(.all)
+                ScrollView {
+                    VStack {
+                        HStack {
+                            Text("Servier Bangladesh")
+                                .foregroundColor(.white)
+                                .padding(EdgeInsets(top: 50, leading: 10, bottom: 50, trailing: 10))
+                            Spacer()
+                            Text("Jun 06, 2024")
+                                .foregroundColor(.white)
+                                .padding(10)
+                        }
+                        .background(Color(hex: "#557288"))
+                        
+                        DashboardCardItem()
+                        DashboardCardItem()
+                        DashboardCardItem()
+                        DashboardCardItem()
+                        
+                    }
+                    
                 }
             }
         }
@@ -24,6 +43,24 @@ struct DashboardView: View {
                 viewModel.willLogout()
             }) {
                 Image(systemName: "power")
+            }
+            
+            Button(action: {
+                print("Notification")
+            }) {
+                Image(systemName: "bell")
+            }
+            
+            Button(action: {
+                print("Settings")
+            }) {
+                Image(systemName: "gear")
+            }
+            
+            Button(action: {
+                print("menu")
+            }) {
+                Image(systemName: "line.horizontal.3")
             }
         }
         )

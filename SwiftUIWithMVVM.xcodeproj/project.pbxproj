@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C132C10B2C1165C100860B27 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132C10A2C1165C100860B27 /* ColorExtensions.swift */; };
+		C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */; };
 		C1BF5A252C1034670082FE31 /* SwiftUIWithMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A242C1034670082FE31 /* SwiftUIWithMVVMApp.swift */; };
 		C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A262C1034670082FE31 /* ContentView.swift */; };
 		C1BF5A292C10346B0082FE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BF5A282C10346B0082FE31 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C132C10A2C1165C100860B27 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCardItem.swift; sourceTree = "<group>"; };
 		C1BF5A212C1034670082FE31 /* SwiftUIWithMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWithMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BF5A242C1034670082FE31 /* SwiftUIWithMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithMVVMApp.swift; sourceTree = "<group>"; };
 		C1BF5A262C1034670082FE31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 		C1BF5A392C10351D0082FE31 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				C132C10A2C1165C100860B27 /* ColorExtensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				C1C25D782C1044C100EB2729 /* DashboardView.swift */,
+				C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -318,7 +324,9 @@
 				C1BF5A412C1036050082FE31 /* User.swift in Sources */,
 				C1C25D712C103D5900EB2729 /* LoginViewModel.swift in Sources */,
 				C1C25D772C10435000EB2729 /* LoginView.swift in Sources */,
+				C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */,
 				C1C25D732C1041BA00EB2729 /* DashboardViewModel.swift in Sources */,
+				C132C10B2C1165C100860B27 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
