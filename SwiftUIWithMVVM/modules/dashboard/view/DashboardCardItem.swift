@@ -8,23 +8,29 @@
 import SwiftUI
 
 struct DashboardCardItem: View {
+    
+    var cntVal:String
+    var cntTitle:String
+    var title:String
+    var offSetVal:Int
+    
     var body: some View {
         HStack {
             Image(systemName: "gear")
             VStack {
                 HStack {
-                    Text("100")
+                    Text(cntVal)
                         .foregroundColor(.black)
                     Spacer() // Add a spacer to push the text to the leading edge
                 }
                 HStack {
-                    Text("Total DCR").foregroundColor(.gray)
+                    Text(cntTitle).foregroundColor(.gray)
                     Spacer()
                 }
                          
              }
              Spacer()
-             Text("DCR Summary")
+             Text(title)
             .padding()
             .foregroundColor(.black)
             .overlay(
@@ -39,12 +45,12 @@ struct DashboardCardItem: View {
             .cornerRadius(20.0)  // Rounded corners
             .shadow(radius: 5)  // Shadow for card-like effect
             .padding(.horizontal)
-            .offset(y: -30)
+            .offset(y:CGFloat(offSetVal))
     }
 }
 
 struct DashboardCardItem_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardCardItem()
+        DashboardCardItem(cntVal: "10", cntTitle: "Cnt Title", title: "Main Title",offSetVal: -30)
     }
 }

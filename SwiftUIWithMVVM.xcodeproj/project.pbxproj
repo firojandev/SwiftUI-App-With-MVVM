@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C132C10B2C1165C100860B27 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132C10A2C1165C100860B27 /* ColorExtensions.swift */; };
 		C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */; };
+		C16BFD552C156DDF00248FDF /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BFD542C156DDF00248FDF /* CommonButton.swift */; };
+		C16BFD572C15B06800248FDF /* DashboardMEItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BFD562C15B06800248FDF /* DashboardMEItem.swift */; };
 		C1BF5A252C1034670082FE31 /* SwiftUIWithMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A242C1034670082FE31 /* SwiftUIWithMVVMApp.swift */; };
 		C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A262C1034670082FE31 /* ContentView.swift */; };
 		C1BF5A292C10346B0082FE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BF5A282C10346B0082FE31 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		C132C10A2C1165C100860B27 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCardItem.swift; sourceTree = "<group>"; };
+		C16BFD542C156DDF00248FDF /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		C16BFD562C15B06800248FDF /* DashboardMEItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardMEItem.swift; sourceTree = "<group>"; };
 		C1BF5A212C1034670082FE31 /* SwiftUIWithMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWithMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BF5A242C1034670082FE31 /* SwiftUIWithMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithMVVMApp.swift; sourceTree = "<group>"; };
 		C1BF5A262C1034670082FE31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 			children = (
 				C1C25D782C1044C100EB2729 /* DashboardView.swift */,
 				C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */,
+				C16BFD542C156DDF00248FDF /* CommonButton.swift */,
+				C16BFD562C15B06800248FDF /* DashboardMEItem.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16BFD552C156DDF00248FDF /* CommonButton.swift in Sources */,
 				C1BF5A4B2C1039810082FE31 /* DatabaseService.swift in Sources */,
 				C1BF5A492C10375B0082FE31 /* NetworkService.swift in Sources */,
 				C1BF5A472C1037260082FE31 /* Notification.swift in Sources */,
@@ -326,6 +333,7 @@
 				C1C25D772C10435000EB2729 /* LoginView.swift in Sources */,
 				C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */,
 				C1C25D732C1041BA00EB2729 /* DashboardViewModel.swift in Sources */,
+				C16BFD572C15B06800248FDF /* DashboardMEItem.swift in Sources */,
 				C132C10B2C1165C100860B27 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
