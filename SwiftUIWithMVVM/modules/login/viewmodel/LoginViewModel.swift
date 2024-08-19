@@ -16,6 +16,8 @@ class LoginViewModel: ObservableObject {
     @Published var isLoggedIn = false
     @Published var errorMessage:String?
     
+    @Published var isLoading = false
+    
     private var cancellables = Set<AnyCancellable>()
     
     func checkLogin() {
@@ -26,15 +28,23 @@ class LoginViewModel: ObservableObject {
     }
     
     func login() {
-        NetworkService.shared.login(username: username, password: password)
+        self.isLoading = true
+        NetworkService.shared.login(userId: username, password: password,token:"Test1")
             .sink(receiveCompletion: { completion in
                 if case .failure(let error) = completion {
                     self.errorMessage = error.localizedDescription
+                    self.isLoading = false
                 }
                 
             }, receiveValue:{ user in
-                DatabaseService.shared.saveUser(user)
-                self.isLoggedIn = true
+                if user.status == "True" {
+                    DatabaseService.shared.saveUser(user)
+                    self.isLoggedIn = true
+                }else{
+                    self.isLoggedIn = false
+                }
+                
+                self.isLoading = false
             })
             .store(in: &cancellables)
     }

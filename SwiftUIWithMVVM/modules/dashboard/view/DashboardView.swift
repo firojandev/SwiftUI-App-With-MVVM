@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct DashboardView: View {
-
+    
     @ObservedObject var viewModel = DashboardViewModel()
     
-
+    @EnvironmentObject var appState: AppState
+    
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack (path: $appState.path) {
             ZStack {
                 Color(hex: "#DCE1E5").ignoresSafeArea(.all)
                 ScrollView {
@@ -30,7 +32,7 @@ struct DashboardView: View {
                                     .padding(10)
                             }
                             .background(Color(hex: "#557288"))
-                          
+                            
                             Spacer()
                             
                             VStack {
@@ -47,14 +49,14 @@ struct DashboardView: View {
                         
                         DashboardCardItem(cntVal: "0", cntTitle: "Total Chemist Visit", title: "Chemist Visit",offSetVal: 50)
                         
-                       
+                        
                         Button(action: {
                             print("Todays TP")
                         }){
                             CommonButton(title: "Today's TP").offset(y:50)
                             
                         }
-                    
+                        
                         Button(action: {
                             print("Admin Panel")
                         }){
@@ -82,7 +84,7 @@ struct DashboardView: View {
             }
             
             Button(action: {
-                print("Settings")
+                appState.path.append(AppDestination.settings)
             }) {
                 Image(systemName: "gear")
             }
@@ -94,6 +96,19 @@ struct DashboardView: View {
             }
         }
         )
+        .navigationDestination(for: AppDestination.self) { destination in
+            switch destination {
+            case .settings:
+                SettingsView()
+            case .changePassword:
+                ChangePasswordView()
+            case .supTP:
+                SupTPView()
+            case .bill:
+                BillView()
+            
+            }
+        }
         .onAppear {
             // Perform any necessary setup on view appear
         }
@@ -103,6 +118,6 @@ struct DashboardView: View {
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardView()
+        DashboardView().environmentObject(AppState())
     }
 }

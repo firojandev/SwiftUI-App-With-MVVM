@@ -15,14 +15,6 @@ class NoticeListViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     func fetchNotices() {
-        NetworkService.shared.fetchNotification()
-            .sink(receiveCompletion: { completion in
-                if case .failure(let error) = completion {
-                    self.errorMessage = error.localizedDescription
-                }
-            }, receiveValue: { notifications in
-                self.notification = notifications
-            })
-            .store(in: &cancellables)
+       
     }
 }

@@ -11,24 +11,35 @@ import Combine
 class NetworkService {
     static let shared = NetworkService()
     
-    func login(username:String,password:String) -> AnyPublisher<User,Error>{
-        let user  = User(status: "A", message:"Loging successfull", designation: "RM", empName: "Altaf", locName: "Dhaka", locCode: "DK1", depotName: "Dhaka")
+    func login(userId:String,password:String,token:String) -> AnyPublisher<User, Error> {
         
-        //dummy
-        return Just(user)
-            .setFailureType(to: Error.self)
+        var urlComponents = URLComponents(string: "http://domain/DCRService.svc/Json/login")
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "UserID", value: userId),
+            URLQueryItem(name: "Password", value: password),
+            URLQueryItem(name: "Token", value: token)
+        ]
+        
+        guard let url = urlComponents?.url else {
+            return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
+        }
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap { data, response in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                    throw URLError(.badServerResponse)
+                }
+                
+                let responseDataString = String(data: data, encoding: .utf8)
+                print("Response Data: \(responseDataString ?? "No Data")")
+                
+                return data
+            }
+            .decode(type: User.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
     
-    func fetchNotification() -> AnyPublisher<[Notification],Error> {
-        //dummy
-        let notices = [
-            Notification(id: "1", title: "Notice 1", description: "Description 1"),
-            Notification(id: "2", title: "Notice 2", description: "Description 2")
-        ]
-        return Just(notices)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
     
 }
+

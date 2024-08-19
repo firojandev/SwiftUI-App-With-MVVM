@@ -5,6 +5,8 @@
 //  Created by Md Altaf Hoshain Firoj on 5/6/24.
 //
 
+//HBR_BD1
+
 import SwiftUI
 
 struct LoginView: View {
@@ -50,6 +52,15 @@ struct LoginView: View {
                             }
                             Spacer()
                         }
+                        if viewModel.isLoading {
+                            ProgressView("Please wait...")
+                        }
+                        
+                        if let errorMessage = viewModel.errorMessage {
+                            Text(errorMessage)
+                                .font(.footnote)
+                                .foregroundColor(.red)
+                        }
                         
                         Button(action: {
                             viewModel.login()
@@ -84,6 +95,8 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView().environmentObject(LoginViewModel())
+        LoginView()
+            .environmentObject(AppState())
+            .environmentObject(LoginViewModel())
     }
 }

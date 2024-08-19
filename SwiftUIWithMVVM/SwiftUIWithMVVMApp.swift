@@ -9,12 +9,15 @@ import SwiftUI
 
 @main
 struct SwiftUIWithMVVMApp: App {
+    @StateObject private var appState = AppState()
     
     @StateObject private var loginViewModel = LoginViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(loginViewModel)
+            ContentView()
+                .environmentObject(appState)
+                .environmentObject(loginViewModel)
         }
     }
 }

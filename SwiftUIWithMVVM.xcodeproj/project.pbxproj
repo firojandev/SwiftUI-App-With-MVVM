@@ -24,6 +24,14 @@
 		C1C25D752C10425E00EB2729 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C25D742C10425E00EB2729 /* NotificationViewModel.swift */; };
 		C1C25D772C10435000EB2729 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C25D762C10435000EB2729 /* LoginView.swift */; };
 		C1C25D792C1044C100EB2729 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C25D782C1044C100EB2729 /* DashboardView.swift */; };
+		C1C3632A2C72FBAB00D5E5EA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C363292C72FBAB00D5E5EA /* SettingsView.swift */; };
+		C1C363322C73002A00D5E5EA /* BillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C363312C73002A00D5E5EA /* BillView.swift */; };
+		C1C363342C73003A00D5E5EA /* SupTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C363332C73003A00D5E5EA /* SupTPView.swift */; };
+		C1C363362C73006000D5E5EA /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C363352C73006000D5E5EA /* ChangePasswordView.swift */; };
+		C1C363382C7305A000D5E5EA /* InfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C363372C7305A000D5E5EA /* InfoItem.swift */; };
+		C1C3633A2C73326300D5E5EA /* MyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C363392C73326300D5E5EA /* MyCardView.swift */; };
+		C1C3633C2C7340D900D5E5EA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C3633B2C7340D900D5E5EA /* AppState.swift */; };
+		C1C3633E2C73420A00D5E5EA /* AppDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C3633D2C73420A00D5E5EA /* AppDestination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +53,14 @@
 		C1C25D742C10425E00EB2729 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		C1C25D762C10435000EB2729 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C1C25D782C1044C100EB2729 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		C1C363292C72FBAB00D5E5EA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C1C363312C73002A00D5E5EA /* BillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillView.swift; sourceTree = "<group>"; };
+		C1C363332C73003A00D5E5EA /* SupTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupTPView.swift; sourceTree = "<group>"; };
+		C1C363352C73006000D5E5EA /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		C1C363372C7305A000D5E5EA /* InfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItem.swift; sourceTree = "<group>"; };
+		C1C363392C73326300D5E5EA /* MyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardView.swift; sourceTree = "<group>"; };
+		C1C3633B2C7340D900D5E5EA /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		C1C3633D2C73420A00D5E5EA /* AppDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDestination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +113,11 @@
 		C1BF5A322C1034CB0082FE31 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				C1C363302C73000E00D5E5EA /* bill */,
+				C1C3632F2C73000500D5E5EA /* suptp */,
+				C1C3632C2C72FFD100D5E5EA /* editpanel */,
+				C1C3632B2C72FF2100D5E5EA /* changepassword */,
+				C1C363242C72FB6F00D5E5EA /* settings */,
 				C1BF5A422C1036F10082FE31 /* notification */,
 				C1BF5A352C1034E90082FE31 /* dashboard */,
 				C1BF5A342C1034E20082FE31 /* login */,
@@ -112,6 +133,8 @@
 				C1BF5A382C1035120082FE31 /* localdb */,
 				C1BF5A372C1035060082FE31 /* networking */,
 				C1BF5A362C1034FF0082FE31 /* model */,
+				C1C3633B2C7340D900D5E5EA /* AppState.swift */,
+				C1C3633D2C73420A00D5E5EA /* AppDestination.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -250,6 +273,87 @@
 			path = viewmodel;
 			sourceTree = "<group>";
 		};
+		C1C363242C72FB6F00D5E5EA /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				C1C363282C72FB9600D5E5EA /* model */,
+				C1C363262C72FB8300D5E5EA /* viewmodel */,
+				C1C363252C72FB7E00D5E5EA /* view */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		C1C363252C72FB7E00D5E5EA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C1C363292C72FBAB00D5E5EA /* SettingsView.swift */,
+				C1C363392C73326300D5E5EA /* MyCardView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C1C363262C72FB8300D5E5EA /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		C1C363282C72FB9600D5E5EA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C1C363372C7305A000D5E5EA /* InfoItem.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C1C3632B2C72FF2100D5E5EA /* changepassword */ = {
+			isa = PBXGroup;
+			children = (
+				C1C363352C73006000D5E5EA /* ChangePasswordView.swift */,
+			);
+			path = changepassword;
+			sourceTree = "<group>";
+		};
+		C1C3632C2C72FFD100D5E5EA /* editpanel */ = {
+			isa = PBXGroup;
+			children = (
+				C1C3632E2C72FFEB00D5E5EA /* dvr */,
+				C1C3632D2C72FFE100D5E5EA /* tp */,
+			);
+			path = editpanel;
+			sourceTree = "<group>";
+		};
+		C1C3632D2C72FFE100D5E5EA /* tp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tp;
+			sourceTree = "<group>";
+		};
+		C1C3632E2C72FFEB00D5E5EA /* dvr */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = dvr;
+			sourceTree = "<group>";
+		};
+		C1C3632F2C73000500D5E5EA /* suptp */ = {
+			isa = PBXGroup;
+			children = (
+				C1C363332C73003A00D5E5EA /* SupTPView.swift */,
+			);
+			path = suptp;
+			sourceTree = "<group>";
+		};
+		C1C363302C73000E00D5E5EA /* bill */ = {
+			isa = PBXGroup;
+			children = (
+				C1C363312C73002A00D5E5EA /* BillView.swift */,
+			);
+			path = bill;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,18 +427,26 @@
 				C16BFD552C156DDF00248FDF /* CommonButton.swift in Sources */,
 				C1BF5A4B2C1039810082FE31 /* DatabaseService.swift in Sources */,
 				C1BF5A492C10375B0082FE31 /* NetworkService.swift in Sources */,
+				C1C363322C73002A00D5E5EA /* BillView.swift in Sources */,
 				C1BF5A472C1037260082FE31 /* Notification.swift in Sources */,
 				C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */,
+				C1C3633A2C73326300D5E5EA /* MyCardView.swift in Sources */,
 				C1BF5A252C1034670082FE31 /* SwiftUIWithMVVMApp.swift in Sources */,
 				C1C25D752C10425E00EB2729 /* NotificationViewModel.swift in Sources */,
+				C1C3633E2C73420A00D5E5EA /* AppDestination.swift in Sources */,
 				C1C25D792C1044C100EB2729 /* DashboardView.swift in Sources */,
 				C1BF5A412C1036050082FE31 /* User.swift in Sources */,
+				C1C3632A2C72FBAB00D5E5EA /* SettingsView.swift in Sources */,
+				C1C363342C73003A00D5E5EA /* SupTPView.swift in Sources */,
 				C1C25D712C103D5900EB2729 /* LoginViewModel.swift in Sources */,
 				C1C25D772C10435000EB2729 /* LoginView.swift in Sources */,
 				C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */,
 				C1C25D732C1041BA00EB2729 /* DashboardViewModel.swift in Sources */,
+				C1C3633C2C7340D900D5E5EA /* AppState.swift in Sources */,
+				C1C363382C7305A000D5E5EA /* InfoItem.swift in Sources */,
 				C16BFD572C15B06800248FDF /* DashboardMEItem.swift in Sources */,
 				C132C10B2C1165C100860B27 /* ColorExtensions.swift in Sources */,
+				C1C363362C73006000D5E5EA /* ChangePasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
