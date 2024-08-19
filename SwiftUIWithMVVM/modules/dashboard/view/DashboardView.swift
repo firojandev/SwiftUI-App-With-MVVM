@@ -100,13 +100,13 @@ struct DashboardView: View {
             switch destination {
             case .settings:
                 SettingsView()
-            case .changePassword:
-                ChangePasswordView()
-            case .supTP:
-                SupTPView()
-            case .bill:
-                BillView()
-            
+            case .changePassword(let infoItem):
+                ChangePasswordView(info: infoItem)
+            case .supTP(let infoItem):
+                SupTPView(info: infoItem)
+            case .bill(let infoItem):
+                BillView(info: infoItem)
+                
             }
         }
         .onAppear {

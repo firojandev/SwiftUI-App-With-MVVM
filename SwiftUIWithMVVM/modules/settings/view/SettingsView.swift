@@ -26,13 +26,13 @@ struct SettingsView: View {
                             title: data.info,
                             subtitle: data.info,
                             changePasswordAction: {
-                                appState.path.append(AppDestination.changePassword)
+                                appState.path.append(AppDestination.changePassword(data))
                             },
                             supTPAction: {
-                                appState.path.append(AppDestination.supTP)
+                                appState.path.append(AppDestination.supTP(data))
                             },
                             billAction:{
-                                appState.path.append(AppDestination.bill)
+                                appState.path.append(AppDestination.bill(data))
                             }
                         )
                         

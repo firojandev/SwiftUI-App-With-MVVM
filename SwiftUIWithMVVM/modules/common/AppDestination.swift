@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-enum AppDestination: Hashable {
+enum AppDestination:Hashable {
     case settings
-    case changePassword
-    case supTP
-    case bill
+    case changePassword(InfoItem)
+    case supTP(InfoItem)
+    case bill(InfoItem)
 }

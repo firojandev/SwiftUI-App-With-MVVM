@@ -13,7 +13,7 @@ class NetworkService {
     
     func login(userId:String,password:String,token:String) -> AnyPublisher<User, Error> {
         
-        var urlComponents = URLComponents(string: "http://domain/DCRService.svc/Json/login")
+        var urlComponents = URLComponents(string: "http://ip/DCRService.svc/Json/login")
         urlComponents?.queryItems = [
             URLQueryItem(name: "UserID", value: userId),
             URLQueryItem(name: "Password", value: password),
