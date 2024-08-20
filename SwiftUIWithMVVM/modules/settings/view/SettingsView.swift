@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @ObservedObject var viewModel = SettingsViewModel()
+    
     @EnvironmentObject var appState: AppState
     
     var mInfos: [InfoItem] = [
@@ -18,30 +20,97 @@ struct SettingsView: View {
         InfoItem(info: "Group: WE014")
     ]
     
-    var body: some View {
-            ScrollView {
-                VStack {
-                    ForEach(mInfos, id: \.id) { data in
-                        MyCardView(
-                            title: data.info,
-                            subtitle: data.info,
-                            changePasswordAction: {
-                                appState.path.append(AppDestination.changePassword(data))
-                            },
-                            supTPAction: {
-                                appState.path.append(AppDestination.supTP(data))
-                            },
-                            billAction:{
-                                appState.path.append(AppDestination.bill(data))
-                            }
-                        )
-                        
-                    }
-                }
-                .padding()
-            }
+    struct InfoTextView: View {
+        let text: String
+        var body: some View {
+            Text(text)
+                .padding(EdgeInsets(top: 6, leading: 10, bottom: 6, trailing: 10))
+                .foregroundColor(.black)
+        }
+    }
     
+    var body: some View {
+        ScrollView {
+            VStack {
+                VStack (alignment: .leading) {
+                    Text("Logged User Info")
+                        .frame(maxWidth: .infinity,minHeight: 50,alignment: .center)
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .background(Color.green)
+                    
+                    InfoTextView(text: "Name: \(viewModel.user?.empName ?? "")")
+                    InfoTextView(text: "ID: \(viewModel.user?.userId ?? "")")
+                    InfoTextView(text: "Market: \(viewModel.user?.locName ?? "")")
+                    InfoTextView(text: "Group: \(viewModel.user?.mpGroup ?? "")")
+                    InfoTextView(text: "Depot: \(viewModel.user?.depotName ?? "")")
+                       
+                  
+                    Button("Change Password"){
+                        appState.path.append(AppDestination.changePassword(InfoItem(info: "")))
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity,alignment: .trailing)
+                    
+                }
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                .shadow(radius: 5)
+                
+                Spacer()
+               
+                Button(action: {}) {
+                    Text("Sync Basic Data")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(5)
+                }
+                .padding(EdgeInsets(top: 10, leading: 1, bottom: 10, trailing: 1))
+                
+                Spacer()
+                
+                VStack {
+                    Text("Clear App Data")
+                        .frame(maxWidth: .infinity,minHeight: 50)
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                    
+                    Text("Clear EDCR app data saved in mobile")
+                        .font(.footnote)
+                   
+                    Button(action: {}) {
+                        Text("Clear Now")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.gray.opacity(0.1))
+                            .foregroundColor(.black)
+                            .cornerRadius(5)
+                    }.padding()
+                    
+                    Spacer()
+                    
+                }
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                .shadow(radius: 5)
+                
+                Text("EDCR Super Servier V1.0.3.20082024 @ Square InformatiX Ltd 2024")
+                    .font(.footnote)
+                    .padding()
+                
+                Spacer()
+                
+                
+            }
+            .padding()
+        }
         .navigationTitle("Settings")
+        .onAppear{
+            viewModel.getUser()
+        }
     }
 }
 

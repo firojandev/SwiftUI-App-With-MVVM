@@ -36,6 +36,12 @@ class NetworkService {
                 return data
             }
             .decode(type: User.self, decoder: JSONDecoder())
+            .tryMap { user in
+                var modifiedUser = user
+                modifiedUser.userId = userId
+                print("modified user \(modifiedUser)")
+                return modifiedUser
+            }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }

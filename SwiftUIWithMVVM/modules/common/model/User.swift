@@ -9,6 +9,7 @@ import Foundation
 
 struct User: Identifiable, Codable {
     var id = UUID()
+    var userId:String? = ""
     var status:String?
     var message:String?
     var mpGroup:String?
@@ -20,15 +21,15 @@ struct User: Identifiable, Codable {
     var isTourPartialAllow:String?
     
     enum CodingKeys:String,CodingKey {
-            case status = "Status"
-            case message = "Message"
-            case mpGroup = "MPGroup"
-            case designation = "Designation"
-            case empName = "EmpName"
-            case locCode = "LocCode"
-            case locName = "LocName"
-            case depotName = "DepotName"
-            case isTourPartialAllow = "IsTourPartialAllow"
-        }
+        case status = "Status"
+        case message = "Message"
+        case mpGroup = "MPGroup"
+        case designation = "Designation"
+        case empName = "EmpName"
+        case locCode = "LocCode"
+        case locName = "LocName"
+        case depotName = "DepotName"
+        case isTourPartialAllow = "IsTourPartialAllow"
+    }
 }
 
