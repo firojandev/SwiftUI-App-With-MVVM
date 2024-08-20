@@ -16,6 +16,9 @@ struct AppConstants {
     
     static let environment:APIEnvironment = .development
     
+    static let devApiURL = "http://ip/DCRService.svc/Json"
+    static let productionApiURL = ""
+    
     static let login = "Login"
     static let logout = "Logout"
     
@@ -26,12 +29,18 @@ extension AppConstants {
     static var apiBaseURL: String {
         switch AppConstants.environment {
         case .development:
-            return "ip/DCRService.svc/Json"
+            return devApiURL
         case .production:
-            return "ip/DCRService.svc/Json"
+            return productionApiURL
         }
     }
 }
+
+//Mark:- API's List
+//Get Nature of DA
+//http://devApiURL/DCRService.svc/Json/GetMpoTmRsmDAnTA?UserID=HBR_BD1&Designation=RM
+//Get Doctors List
+//http://devApiURL/DCRService.svc/Json/GetMpoTmRsmDoctorList?UserID=HBR_BD1&Designation=RM&LocCode=WE014
 
 //Mark:- Test Email
 extension AppConstants {

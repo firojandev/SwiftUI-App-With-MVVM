@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct SettingsView: View {
+    
+    @Environment(\.managedObjectContext) private var context
     
     @ObservedObject var viewModel = SettingsViewModel()
     
@@ -71,7 +74,8 @@ struct SettingsView: View {
                     viewModel.getDoctors(
                         userId: viewModel.user?.userId ?? "",
                         designation: viewModel.user?.designation ?? "",
-                        locCode: viewModel.user?.locCode ?? "")
+                        locCode: viewModel.user?.locCode ?? "",
+                        context: context)
                 }) {
                     Text("Sync Basic Data")
                         .padding()
@@ -123,6 +127,11 @@ struct SettingsView: View {
         .navigationTitle("Settings")
         .onAppear{
             viewModel.getUser()
+            
+            //fetch doctors list for testing purpose
+            let doctors =  viewModel.getSavedDoctors(context: context)
+            print("total doctors:\(doctors.count)")
+            
         }
     }
 }
