@@ -44,8 +44,8 @@ struct SettingsView: View {
                     InfoTextView(text: "Market: \(viewModel.user?.locName ?? "")")
                     InfoTextView(text: "Group: \(viewModel.user?.mpGroup ?? "")")
                     InfoTextView(text: "Depot: \(viewModel.user?.depotName ?? "")")
-                       
-                  
+                    
+                    
                     Button("Change Password"){
                         appState.path.append(AppDestination.changePassword(InfoItem(info: "")))
                     }
@@ -58,8 +58,21 @@ struct SettingsView: View {
                 .shadow(radius: 5)
                 
                 Spacer()
-               
-                Button(action: {}) {
+                
+                if viewModel.isLoading {
+                    ProgressView("Loading...")
+                }
+                
+                if viewModel.errorMessage != nil {
+                    Text(viewModel.errorMessage ?? "").foregroundColor(.red)
+                }
+                
+                Button(action: {
+                    viewModel.getDoctors(
+                        userId: viewModel.user?.userId ?? "",
+                        designation: viewModel.user?.designation ?? "",
+                        locCode: viewModel.user?.locCode ?? "")
+                }) {
                     Text("Sync Basic Data")
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -80,7 +93,7 @@ struct SettingsView: View {
                     
                     Text("Clear EDCR app data saved in mobile")
                         .font(.footnote)
-                   
+                    
                     Button(action: {}) {
                         Text("Clear Now")
                             .padding()

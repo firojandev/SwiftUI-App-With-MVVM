@@ -13,6 +13,9 @@
 		C16BFD572C15B06800248FDF /* DashboardMEItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BFD562C15B06800248FDF /* DashboardMEItem.swift */; };
 		C1B0A5782C744BB600DB3BE2 /* SettingsViewBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A5772C744BB600DB3BE2 /* SettingsViewBackup.swift */; };
 		C1B0A57A2C745C8000DB3BE2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A5792C745C8000DB3BE2 /* SettingsViewModel.swift */; };
+		C1B0A57C2C747EF100DB3BE2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A57B2C747EF100DB3BE2 /* AppConstants.swift */; };
+		C1B0A5802C748F8300DB3BE2 /* DoctorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A57F2C748F8300DB3BE2 /* DoctorsResponse.swift */; };
+		C1B0A5822C74908400DB3BE2 /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A5812C74908400DB3BE2 /* DoctorModel.swift */; };
 		C1BF5A252C1034670082FE31 /* SwiftUIWithMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A242C1034670082FE31 /* SwiftUIWithMVVMApp.swift */; };
 		C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A262C1034670082FE31 /* ContentView.swift */; };
 		C1BF5A292C10346B0082FE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BF5A282C10346B0082FE31 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 		C16BFD562C15B06800248FDF /* DashboardMEItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardMEItem.swift; sourceTree = "<group>"; };
 		C1B0A5772C744BB600DB3BE2 /* SettingsViewBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewBackup.swift; sourceTree = "<group>"; };
 		C1B0A5792C745C8000DB3BE2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		C1B0A57B2C747EF100DB3BE2 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		C1B0A57F2C748F8300DB3BE2 /* DoctorsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsResponse.swift; sourceTree = "<group>"; };
+		C1B0A5812C74908400DB3BE2 /* DoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
 		C1BF5A212C1034670082FE31 /* SwiftUIWithMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWithMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BF5A242C1034670082FE31 /* SwiftUIWithMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithMVVMApp.swift; sourceTree = "<group>"; };
 		C1BF5A262C1034670082FE31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +84,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1B0A57D2C748F6000DB3BE2 /* doctors */ = {
+			isa = PBXGroup;
+			children = (
+				C1B0A57E2C748F6C00DB3BE2 /* model */,
+			);
+			path = doctors;
+			sourceTree = "<group>";
+		};
+		C1B0A57E2C748F6C00DB3BE2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C1B0A57F2C748F8300DB3BE2 /* DoctorsResponse.swift */,
+				C1B0A5812C74908400DB3BE2 /* DoctorModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		C1BF5A182C1034670082FE31 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +140,7 @@
 		C1BF5A322C1034CB0082FE31 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				C1B0A57D2C748F6000DB3BE2 /* doctors */,
 				C1C363302C73000E00D5E5EA /* bill */,
 				C1C3632F2C73000500D5E5EA /* suptp */,
 				C1C3632C2C72FFD100D5E5EA /* editpanel */,
@@ -139,6 +163,7 @@
 				C1BF5A362C1034FF0082FE31 /* model */,
 				C1C3633B2C7340D900D5E5EA /* AppState.swift */,
 				C1C3633D2C73420A00D5E5EA /* AppDestination.swift */,
+				C1B0A57B2C747EF100DB3BE2 /* AppConstants.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -438,7 +463,9 @@
 				C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */,
 				C1C3633A2C73326300D5E5EA /* MyCardView.swift in Sources */,
 				C1BF5A252C1034670082FE31 /* SwiftUIWithMVVMApp.swift in Sources */,
+				C1B0A5822C74908400DB3BE2 /* DoctorModel.swift in Sources */,
 				C1C25D752C10425E00EB2729 /* NotificationViewModel.swift in Sources */,
+				C1B0A5802C748F8300DB3BE2 /* DoctorsResponse.swift in Sources */,
 				C1C3633E2C73420A00D5E5EA /* AppDestination.swift in Sources */,
 				C1B0A57A2C745C8000DB3BE2 /* SettingsViewModel.swift in Sources */,
 				C1C25D792C1044C100EB2729 /* DashboardView.swift in Sources */,
@@ -453,6 +480,7 @@
 				C1C363382C7305A000D5E5EA /* InfoItem.swift in Sources */,
 				C16BFD572C15B06800248FDF /* DashboardMEItem.swift in Sources */,
 				C1B0A5782C744BB600DB3BE2 /* SettingsViewBackup.swift in Sources */,
+				C1B0A57C2C747EF100DB3BE2 /* AppConstants.swift in Sources */,
 				C132C10B2C1165C100860B27 /* ColorExtensions.swift in Sources */,
 				C1C363362C73006000D5E5EA /* ChangePasswordView.swift in Sources */,
 			);

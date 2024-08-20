@@ -10,8 +10,8 @@ import Combine
 
 class LoginViewModel: ObservableObject {
     
-    @Published var username = ""
-    @Published var password = ""
+    @Published var username = AppConstants.testUserId
+    @Published var password = AppConstants.testPassword
     
     @Published var isLoggedIn = false
     @Published var errorMessage:String?
