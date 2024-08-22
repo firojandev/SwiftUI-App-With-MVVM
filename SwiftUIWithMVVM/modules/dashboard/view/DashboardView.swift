@@ -17,7 +17,7 @@ struct DashboardView: View {
     var body: some View {
         VStack {
             ZStack {
-                Color(hex: "#DCE1E5").ignoresSafeArea(.all)
+                Color.colorLimeLight.ignoresSafeArea(.all)
                 ScrollView {
                     VStack {
                         ZStack {

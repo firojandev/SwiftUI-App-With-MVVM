@@ -9,6 +9,16 @@ import Foundation
 import SwiftUI
 
 extension Color {
+    
+    static let colorLimeLight = Color("ColorLimeLight")
+    static let customGreenLight = Color("ColorGreenLight")
+    static let customGreenMedium = Color("ColorGreenMedium")
+    static let customGreenDark = Color("ColorGreenDark")
+    static let customGrayLight = Color("ColorGrayLight")
+    static let customGrayMedium = Color("ColorGrayMedium")
+    static let customIndigoMedium = Color("ColorIndigoMedium")
+    static let customSalmonLight = Color("ColorSalmonLight")
+    
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0

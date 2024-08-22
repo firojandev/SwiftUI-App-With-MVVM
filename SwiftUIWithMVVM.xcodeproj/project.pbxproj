@@ -10,6 +10,9 @@
 		C12DBBCF2C76FCCF0067E9F7 /* NewDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBCE2C76FCCF0067E9F7 /* NewDoctorView.swift */; };
 		C12DBBD52C77334E0067E9F7 /* NavState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBD42C77334E0067E9F7 /* NavState.swift */; };
 		C12DBBD72C77336E0067E9F7 /* NavRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBD62C77336E0067E9F7 /* NavRoute.swift */; };
+		C12DBBD92C7737260067E9F7 /* NewDoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBD82C7737260067E9F7 /* NewDoctorViewModel.swift */; };
+		C12DBBDB2C773EEB0067E9F7 /* CommonButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBDA2C773EEB0067E9F7 /* CommonButtonView.swift */; };
+		C12DBBDD2C7742160067E9F7 /* CommonRadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBDC2C7742160067E9F7 /* CommonRadioButtonView.swift */; };
 		C132C10B2C1165C100860B27 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132C10A2C1165C100860B27 /* ColorExtensions.swift */; };
 		C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */; };
 		C16BFD552C156DDF00248FDF /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BFD542C156DDF00248FDF /* CommonButton.swift */; };
@@ -45,6 +48,9 @@
 		C12DBBCE2C76FCCF0067E9F7 /* NewDoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDoctorView.swift; sourceTree = "<group>"; };
 		C12DBBD42C77334E0067E9F7 /* NavState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavState.swift; sourceTree = "<group>"; };
 		C12DBBD62C77336E0067E9F7 /* NavRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRoute.swift; sourceTree = "<group>"; };
+		C12DBBD82C7737260067E9F7 /* NewDoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDoctorViewModel.swift; sourceTree = "<group>"; };
+		C12DBBDA2C773EEB0067E9F7 /* CommonButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonView.swift; sourceTree = "<group>"; };
+		C12DBBDC2C7742160067E9F7 /* CommonRadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonRadioButtonView.swift; sourceTree = "<group>"; };
 		C132C10A2C1165C100860B27 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCardItem.swift; sourceTree = "<group>"; };
 		C16BFD542C156DDF00248FDF /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				C12DBBCE2C76FCCF0067E9F7 /* NewDoctorView.swift */,
+				C12DBBD82C7737260067E9F7 /* NewDoctorViewModel.swift */,
 			);
 			path = newdoctor;
 			sourceTree = "<group>";
@@ -123,6 +130,8 @@
 		C12DBBD22C7732B80067E9F7 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				C12DBBDA2C773EEB0067E9F7 /* CommonButtonView.swift */,
+				C12DBBDC2C7742160067E9F7 /* CommonRadioButtonView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -521,10 +530,13 @@
 				C1B0A5822C74908400DB3BE2 /* DoctorModel.swift in Sources */,
 				C1C25D752C10425E00EB2729 /* NotificationViewModel.swift in Sources */,
 				C1B0A5802C748F8300DB3BE2 /* DoctorsResponse.swift in Sources */,
+				C12DBBDD2C7742160067E9F7 /* CommonRadioButtonView.swift in Sources */,
 				C1B0A57A2C745C8000DB3BE2 /* SettingsViewModel.swift in Sources */,
 				C1C25D792C1044C100EB2729 /* DashboardView.swift in Sources */,
 				C1BF5A412C1036050082FE31 /* User.swift in Sources */,
 				C1C3632A2C72FBAB00D5E5EA /* SettingsView.swift in Sources */,
+				C12DBBD92C7737260067E9F7 /* NewDoctorViewModel.swift in Sources */,
+				C12DBBDB2C773EEB0067E9F7 /* CommonButtonView.swift in Sources */,
 				C1C363342C73003A00D5E5EA /* SupTPView.swift in Sources */,
 				C1C25D712C103D5900EB2729 /* LoginViewModel.swift in Sources */,
 				C1C25D772C10435000EB2729 /* LoginView.swift in Sources */,
