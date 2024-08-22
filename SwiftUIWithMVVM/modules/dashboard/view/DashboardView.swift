@@ -37,7 +37,9 @@ struct DashboardView: View {
                             
                             VStack {
                                 Spacer()
-                                DashboardCardItem(cntVal: "0", cntTitle: "Total DCR", title: "DCR Summary",offSetVal: 0).offset(y:45)
+                                DashboardCardItem(cntVal: "0", cntTitle: "Total DCR", title: "DCR Summary",offSetVal: 0, userAction:{
+                                    
+                                }).offset(y:45)
                             }
                             
                         }
@@ -45,9 +47,15 @@ struct DashboardView: View {
                         DashboardMEItem(mDCR:"0", eDCR: "10").offset(y:50)
                         
                         
-                        DashboardCardItem(cntVal: "0", cntTitle: "New DCR", title: "New DCR",offSetVal:50)
+                        DashboardCardItem(cntVal: "0", cntTitle: "New DCR", title: "New DCR",offSetVal:50, userAction: {
+                            print("New DCR")
+                            appState.path.append(AppDestination.newDoctor)
+                            
+                        })
                         
-                        DashboardCardItem(cntVal: "0", cntTitle: "Total Chemist Visit", title: "Chemist Visit",offSetVal: 50)
+                        DashboardCardItem(cntVal: "0", cntTitle: "Total Chemist Visit", title: "Chemist Visit",offSetVal: 50, userAction: {
+                            
+                        })
                         
                         
                         Button(action: {
@@ -106,9 +114,11 @@ struct DashboardView: View {
                 SupTPView(info: infoItem)
             case .bill(let infoItem):
                 BillView(info: infoItem)
-                
+            case .newDoctor:
+                NewDoctorView()
             }
         }
+        
         .onAppear {
             // Perform any necessary setup on view appear
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12DBBCF2C76FCCF0067E9F7 /* NewDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBCE2C76FCCF0067E9F7 /* NewDoctorView.swift */; };
 		C132C10B2C1165C100860B27 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132C10A2C1165C100860B27 /* ColorExtensions.swift */; };
 		C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */; };
 		C16BFD552C156DDF00248FDF /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BFD542C156DDF00248FDF /* CommonButton.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C12DBBCE2C76FCCF0067E9F7 /* NewDoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDoctorView.swift; sourceTree = "<group>"; };
 		C132C10A2C1165C100860B27 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCardItem.swift; sourceTree = "<group>"; };
 		C16BFD542C156DDF00248FDF /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
@@ -86,6 +88,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C12DBBCA2C76ED050067E9F7 /* newdcr */ = {
+			isa = PBXGroup;
+			children = (
+				C12DBBCB2C76ED4A0067E9F7 /* newdoctor */,
+			);
+			path = newdcr;
+			sourceTree = "<group>";
+		};
+		C12DBBCB2C76ED4A0067E9F7 /* newdoctor */ = {
+			isa = PBXGroup;
+			children = (
+				C12DBBCE2C76FCCF0067E9F7 /* NewDoctorView.swift */,
+			);
+			path = newdoctor;
+			sourceTree = "<group>";
+		};
 		C1B0A57D2C748F6000DB3BE2 /* doctors */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +161,7 @@
 		C1BF5A322C1034CB0082FE31 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				C12DBBCA2C76ED050067E9F7 /* newdcr */,
 				C1B0A57D2C748F6000DB3BE2 /* doctors */,
 				C1C363302C73000E00D5E5EA /* bill */,
 				C1C3632F2C73000500D5E5EA /* suptp */,
@@ -461,6 +480,7 @@
 				C16BFD552C156DDF00248FDF /* CommonButton.swift in Sources */,
 				C1BF5A4B2C1039810082FE31 /* DatabaseService.swift in Sources */,
 				C1BF5A492C10375B0082FE31 /* NetworkService.swift in Sources */,
+				C12DBBCF2C76FCCF0067E9F7 /* NewDoctorView.swift in Sources */,
 				C1C363322C73002A00D5E5EA /* BillView.swift in Sources */,
 				C1BF5A472C1037260082FE31 /* Notification.swift in Sources */,
 				C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */,

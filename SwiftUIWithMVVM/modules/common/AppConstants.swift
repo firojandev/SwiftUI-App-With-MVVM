@@ -18,7 +18,7 @@ struct AppConstants {
     
     static let devApiURL = "http://ip/DCRService.svc/Json"
     static let productionApiURL = ""
-    
+
     static let login = "Login"
     static let logout = "Logout"
     

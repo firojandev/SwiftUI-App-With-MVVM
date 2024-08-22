@@ -13,4 +13,5 @@ enum AppDestination:Hashable {
     case changePassword(InfoItem)
     case supTP(InfoItem)
     case bill(InfoItem)
+    case newDoctor
 }
