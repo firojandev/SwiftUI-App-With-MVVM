@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import CoreData
 
 class SettingsViewModel: ObservableObject {
     
@@ -15,6 +16,9 @@ class SettingsViewModel: ObservableObject {
     @Published var doctorsList: [DoctorModel] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
+    
+    //Saved local doctors
+    //@Published var savedDoctorsList: [Doctors] = []
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -26,7 +30,7 @@ class SettingsViewModel: ObservableObject {
         }
     }
     
-    func getDoctors(userId:String,designation:String,locCode:String) {
+    func getDoctors(userId:String,designation:String,locCode:String,context:NSManagedObjectContext) {
         self.isLoading = true
         NetworkService.shared.getDoctors(userId: userId, designation: designation, locCode: locCode)
             .sink(receiveCompletion: { completion in
@@ -36,9 +40,22 @@ class SettingsViewModel: ObservableObject {
                 }
             }, receiveValue: { items in
                 self.doctorsList = items
+                
+                //Saving to local
+                DatabaseService.shared.saveDoctorsToCoreData(
+                    doctorsList: self.doctorsList,
+                    context: context
+                )
+                
                 self.isLoading = false
             })
             .store(in: &cancellables)
+    }
+    
+    func getSavedDoctors(context:NSManagedObjectContext)  -> [Doctors] {
+        let doctors =  DatabaseService.shared.fetchDoctorsFromCoreData(context: context)
+        
+        return doctors
     }
     
     

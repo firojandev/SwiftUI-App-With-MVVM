@@ -8,12 +8,6 @@
 import Foundation
 import Combine
 
-//Get Nature of DA
-//http://ip/DCRService.svc/Json/GetMpoTmRsmDAnTA?UserID=HBR_BD1&Designation=RM
-
-//Get Doctors List
-//http://ip/DCRService.svc/Json/GetMpoTmRsmDoctorList?UserID=HBR_BD1&Designation=RM&LocCode=WE014
-
 class NetworkService {
     static let shared = NetworkService()
     
