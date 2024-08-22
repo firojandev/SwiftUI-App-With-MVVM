@@ -13,7 +13,6 @@ struct DashboardView: View {
     
     @EnvironmentObject var navState: NavState
     
-    
     var body: some View {
         VStack {
             ZStack {
@@ -48,8 +47,7 @@ struct DashboardView: View {
                         
                         DashboardCardItem(cntVal: "0", cntTitle: "New DCR", title: "New DCR",offSetVal:50, userAction: {
                             print("New DCR")
-                            navState.path.append(NavRoute.newDoctorView)
-                            
+                            navigate(to: NavRoute.newDoctorView)
                         })
                         
                         DashboardCardItem(cntVal: "0", cntTitle: "Total Chemist Visit", title: "Chemist Visit",offSetVal: 50, userAction: {
@@ -91,7 +89,7 @@ struct DashboardView: View {
             }
             
             Button(action: {
-                navState.path.append(NavRoute.settings)
+                navigate(to: NavRoute.settings)
             }) {
                 Image(systemName: "gear")
             }
@@ -107,11 +105,31 @@ struct DashboardView: View {
         .onChange(of: viewModel.isLogout) { isLogout in
             print("isLogout:\(isLogout)")
             if isLogout {
-                navState.path.append(NavRoute.loginView)
+                navigate(to: NavRoute.loginView)
             }
         }
         .onAppear {
             // Perform any necessary setup on view appear
+        }
+    }
+    
+    private func navigate(to route: NavRoute) {
+        if #available(iOS 16.0, *) {
+            navState.path.append(route)
+        } else {
+            // Handle navigation for iOS versions before 16
+            // This part could involve different navigation logic or using NavigationLink if necessary
+            // For simplicity, you might need to update this based on your specific needs
+            switch route {
+            case .newDoctorView:
+                // Navigate to NewDoctorView (e.g., manually update view state or present a sheet)
+                break
+            case .settings:
+                // Navigate to SettingsView (e.g., manually update view state or present a sheet)
+                break
+            default:
+                break
+            }
         }
     }
 }
