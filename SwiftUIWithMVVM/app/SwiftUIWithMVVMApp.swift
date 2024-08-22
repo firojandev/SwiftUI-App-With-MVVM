@@ -10,7 +10,7 @@ import CoreData
 
 @main
 struct SwiftUIWithMVVMApp: App {
-    @StateObject private var appState = AppState()
+    @StateObject private var navState = NavState()
     
     let persistentContainer = NSPersistentContainer(name: "Model")
     
@@ -27,7 +27,7 @@ struct SwiftUIWithMVVMApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(appState)
+                .environmentObject(navState)
                 .environmentObject(loginViewModel)
                 .environment(\.managedObjectContext, persistentContainer.viewContext)
         }

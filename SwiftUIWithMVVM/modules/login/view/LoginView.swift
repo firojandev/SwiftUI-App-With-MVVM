@@ -13,10 +13,11 @@ struct LoginView: View {
     
     @ObservedObject var viewModel = LoginViewModel()
     
+    @EnvironmentObject var navState: NavState
+    
     @State private var rememberMe = false
     
     var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack {
                     Spacer()
@@ -88,15 +89,20 @@ struct LoginView: View {
                 }
             }
             .background(Color(.systemGray5).edgesIgnoringSafeArea(.all))
-            .navigationDestination(isPresented: $viewModel.isLoggedIn, destination: { DashboardView().navigationBarBackButtonHidden(true)})
-        }
+            .onChange(of: viewModel.isLoggedIn) { isLoggedIn in
+                print("isLoggedIn:\(isLoggedIn)")
+                if isLoggedIn {
+                    navState.path.append(NavRoute.dashboardView)
+                }
+            }
+    
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .environmentObject(AppState())
+            .environmentObject(NavState())
             .environmentObject(LoginViewModel())
     }
 }

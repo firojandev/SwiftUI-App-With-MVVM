@@ -14,7 +14,7 @@ struct SettingsView: View {
     
     @ObservedObject var viewModel = SettingsViewModel()
     
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var navState: NavState
     
     var mInfos: [InfoItem] = [
         InfoItem(info: "Name: Altaf Hoshain"),
@@ -50,7 +50,7 @@ struct SettingsView: View {
                     
                     
                     Button("Change Password"){
-                        appState.path.append(AppDestination.changePassword(InfoItem(info: "")))
+                        navState.path.append(NavRoute.changePassword(InfoItem(info: "")))
                     }
                     .padding()
                     .frame(maxWidth: .infinity,alignment: .trailing)
@@ -138,6 +138,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView().environmentObject(AppState())
+        SettingsView().environmentObject(NavState())
     }
 }

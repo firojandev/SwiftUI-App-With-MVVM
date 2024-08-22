@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsViewBackup: View {
     
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var navState: NavState
     
     var mInfos: [InfoItem] = [
         InfoItem(info: "Name: Altaf Hoshain"),
@@ -26,13 +26,13 @@ struct SettingsViewBackup: View {
                             title: data.info,
                             subtitle: data.info,
                             changePasswordAction: {
-                                appState.path.append(AppDestination.changePassword(data))
+                                navState.path.append(NavRoute.changePassword(data))
                             },
                             supTPAction: {
-                                appState.path.append(AppDestination.supTP(data))
+                                navState.path.append(NavRoute.supTP(data))
                             },
                             billAction:{
-                                appState.path.append(AppDestination.bill(data))
+                                navState.path.append(NavRoute.bill(data))
                             }
                         )
                         
@@ -47,6 +47,6 @@ struct SettingsViewBackup: View {
 
 struct SettingsViewBackup_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsViewBackup().environmentObject(AppState())
+        SettingsViewBackup().environmentObject(NavState())
     }
 }

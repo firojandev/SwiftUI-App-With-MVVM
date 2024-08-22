@@ -47,7 +47,7 @@ extension AppConstants {
     static var testUserId: String {
         switch AppConstants.environment {
         case .development:
-            return "HBR_BD1"
+            return "RM1"
         case .production:
             return ""
         }
@@ -59,7 +59,7 @@ extension AppConstants {
     static var testPassword: String {
         switch AppConstants.environment {
         case .development:
-            return "HBR_BD1"
+            return "RM"
         case .production:
             return ""
         }
