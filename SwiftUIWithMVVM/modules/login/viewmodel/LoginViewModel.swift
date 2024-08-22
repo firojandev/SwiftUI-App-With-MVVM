@@ -21,8 +21,10 @@ class LoginViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     func checkLogin() {
+        print("Is calling")
         let user = DatabaseService.shared.getUser()
         if user != nil {
+            print("Is called")
             self.isLoggedIn = true
         }
     }

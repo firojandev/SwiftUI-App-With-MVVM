@@ -15,7 +15,6 @@ class DatabaseService {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(user) {
             print("encoded the user")
-            print(encoded)
             UserDefaults.standard.set(encoded, forKey: "loggedInUser")
         }
     }

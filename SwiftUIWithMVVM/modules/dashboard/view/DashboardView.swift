@@ -11,16 +11,15 @@ struct DashboardView: View {
     
     @ObservedObject var viewModel = DashboardViewModel()
     
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var navState: NavState
     
     
     var body: some View {
-        NavigationStack (path: $appState.path) {
+        VStack {
             ZStack {
                 Color(hex: "#DCE1E5").ignoresSafeArea(.all)
                 ScrollView {
                     VStack {
-                        
                         ZStack {
                             HStack {
                                 Text("Servier Bangladesh")
@@ -37,7 +36,9 @@ struct DashboardView: View {
                             
                             VStack {
                                 Spacer()
-                                DashboardCardItem(cntVal: "0", cntTitle: "Total DCR", title: "DCR Summary",offSetVal: 0).offset(y:45)
+                                DashboardCardItem(cntVal: "0", cntTitle: "Total DCR", title: "DCR Summary",offSetVal: 0, userAction:{
+                                    
+                                }).offset(y:45)
                             }
                             
                         }
@@ -45,9 +46,15 @@ struct DashboardView: View {
                         DashboardMEItem(mDCR:"0", eDCR: "10").offset(y:50)
                         
                         
-                        DashboardCardItem(cntVal: "0", cntTitle: "New DCR", title: "New DCR",offSetVal:50)
+                        DashboardCardItem(cntVal: "0", cntTitle: "New DCR", title: "New DCR",offSetVal:50, userAction: {
+                            print("New DCR")
+                            navState.path.append(NavRoute.newDoctorView)
+                            
+                        })
                         
-                        DashboardCardItem(cntVal: "0", cntTitle: "Total Chemist Visit", title: "Chemist Visit",offSetVal: 50)
+                        DashboardCardItem(cntVal: "0", cntTitle: "Total Chemist Visit", title: "Chemist Visit",offSetVal: 50, userAction: {
+                            
+                        })
                         
                         
                         Button(action: {
@@ -84,7 +91,7 @@ struct DashboardView: View {
             }
             
             Button(action: {
-                appState.path.append(AppDestination.settings)
+                navState.path.append(NavRoute.settings)
             }) {
                 Image(systemName: "gear")
             }
@@ -96,28 +103,21 @@ struct DashboardView: View {
             }
         }
         )
-        .navigationDestination(for: AppDestination.self) { destination in
-            switch destination {
-            case .settings:
-                SettingsView()
-            case .changePassword(let infoItem):
-                ChangePasswordView(info: infoItem)
-            case .supTP(let infoItem):
-                SupTPView(info: infoItem)
-            case .bill(let infoItem):
-                BillView(info: infoItem)
-                
+        
+        .onChange(of: viewModel.isLogout) { isLogout in
+            print("isLogout:\(isLogout)")
+            if isLogout {
+                navState.path.append(NavRoute.loginView)
             }
         }
         .onAppear {
             // Perform any necessary setup on view appear
         }
-        .navigationDestination(isPresented: $viewModel.isLogout, destination: { LoginView().navigationBarBackButtonHidden(true)})
     }
 }
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardView().environmentObject(AppState())
+        DashboardView().environmentObject(NavState())
     }
 }

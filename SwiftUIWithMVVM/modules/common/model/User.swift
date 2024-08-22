@@ -9,7 +9,7 @@ import Foundation
 
 struct User: Identifiable, Codable {
     var id = UUID()
-    var userId:String? = "HBR_BD1"
+    var userId:String? = "RM1"
     var status:String?
     var message:String?
     var mpGroup:String?
