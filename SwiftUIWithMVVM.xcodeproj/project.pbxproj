@@ -23,6 +23,15 @@
 		C1B0A5802C748F8300DB3BE2 /* DoctorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A57F2C748F8300DB3BE2 /* DoctorsResponse.swift */; };
 		C1B0A5822C74908400DB3BE2 /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A5812C74908400DB3BE2 /* DoctorModel.swift */; };
 		C1B0A5852C749AFC00DB3BE2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A5832C749AFC00DB3BE2 /* Model.xcdatamodeld */; };
+		C1B37FFD2C7B024A00DF0CED /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B37FFC2C7B024A00DF0CED /* MainMenuView.swift */; };
+		C1B380002C7B04C400DF0CED /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B37FFF2C7B04C400DF0CED /* MenuItem.swift */; };
+		C1B380032C7B084B00DF0CED /* MenuItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B380022C7B084B00DF0CED /* MenuItemRowView.swift */; };
+		C1B380062C7B23D400DF0CED /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B380052C7B23D400DF0CED /* ToastView.swift */; };
+		C1B380082C7B263A00DF0CED /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B380072C7B263A00DF0CED /* ToastModifier.swift */; };
+		C1B3800A2C7B267100DF0CED /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B380092C7B267100DF0CED /* ViewExtensions.swift */; };
+		C1BD30762C7B340000A736E1 /* EditMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD30752C7B340000A736E1 /* EditMenuView.swift */; };
+		C1BD30782C7B352D00A736E1 /* EditPanelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD30772C7B352D00A736E1 /* EditPanelItem.swift */; };
+		C1BD307A2C7B35EA00A736E1 /* EditPanelItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD30792C7B35EA00A736E1 /* EditPanelItemRowView.swift */; };
 		C1BF5A252C1034670082FE31 /* SwiftUIWithMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A242C1034670082FE31 /* SwiftUIWithMVVMApp.swift */; };
 		C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF5A262C1034670082FE31 /* ContentView.swift */; };
 		C1BF5A292C10346B0082FE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BF5A282C10346B0082FE31 /* Assets.xcassets */; };
@@ -61,6 +70,15 @@
 		C1B0A57F2C748F8300DB3BE2 /* DoctorsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsResponse.swift; sourceTree = "<group>"; };
 		C1B0A5812C74908400DB3BE2 /* DoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
 		C1B0A5842C749AFC00DB3BE2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C1B37FFC2C7B024A00DF0CED /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		C1B37FFF2C7B04C400DF0CED /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		C1B380022C7B084B00DF0CED /* MenuItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemRowView.swift; sourceTree = "<group>"; };
+		C1B380052C7B23D400DF0CED /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		C1B380072C7B263A00DF0CED /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
+		C1B380092C7B267100DF0CED /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		C1BD30752C7B340000A736E1 /* EditMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMenuView.swift; sourceTree = "<group>"; };
+		C1BD30772C7B352D00A736E1 /* EditPanelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPanelItem.swift; sourceTree = "<group>"; };
+		C1BD30792C7B35EA00A736E1 /* EditPanelItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPanelItemRowView.swift; sourceTree = "<group>"; };
 		C1BF5A212C1034670082FE31 /* SwiftUIWithMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWithMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BF5A242C1034670082FE31 /* SwiftUIWithMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithMVVMApp.swift; sourceTree = "<group>"; };
 		C1BF5A262C1034670082FE31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +148,7 @@
 		C12DBBD22C7732B80067E9F7 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				C1B380042C7B1AFF00DF0CED /* toast */,
 				C12DBBDA2C773EEB0067E9F7 /* CommonButtonView.swift */,
 				C12DBBDC2C7742160067E9F7 /* CommonRadioButtonView.swift */,
 			);
@@ -160,6 +179,41 @@
 				C1B0A5812C74908400DB3BE2 /* DoctorModel.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		C1B37FFB2C7B023300DF0CED /* mainmenu */ = {
+			isa = PBXGroup;
+			children = (
+				C1B380012C7B081400DF0CED /* view */,
+				C1B37FFE2C7B04AF00DF0CED /* model */,
+			);
+			path = mainmenu;
+			sourceTree = "<group>";
+		};
+		C1B37FFE2C7B04AF00DF0CED /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C1B37FFF2C7B04C400DF0CED /* MenuItem.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C1B380012C7B081400DF0CED /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C1B37FFC2C7B024A00DF0CED /* MainMenuView.swift */,
+				C1B380022C7B084B00DF0CED /* MenuItemRowView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C1B380042C7B1AFF00DF0CED /* toast */ = {
+			isa = PBXGroup;
+			children = (
+				C1B380052C7B23D400DF0CED /* ToastView.swift */,
+				C1B380072C7B263A00DF0CED /* ToastModifier.swift */,
+			);
+			path = toast;
 			sourceTree = "<group>";
 		};
 		C1BF5A182C1034670082FE31 = {
@@ -202,6 +256,7 @@
 		C1BF5A322C1034CB0082FE31 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				C1B37FFB2C7B023300DF0CED /* mainmenu */,
 				C12DBBCA2C76ED050067E9F7 /* newdcr */,
 				C1B0A57D2C748F6000DB3BE2 /* doctors */,
 				C1C363302C73000E00D5E5EA /* bill */,
@@ -279,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				C132C10A2C1165C100860B27 /* ColorExtensions.swift */,
+				C1B380092C7B267100DF0CED /* ViewExtensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -414,6 +470,9 @@
 			children = (
 				C1C3632E2C72FFEB00D5E5EA /* dvr */,
 				C1C3632D2C72FFE100D5E5EA /* tp */,
+				C1BD30752C7B340000A736E1 /* EditMenuView.swift */,
+				C1BD30772C7B352D00A736E1 /* EditPanelItem.swift */,
+				C1BD30792C7B35EA00A736E1 /* EditPanelItemRowView.swift */,
 			);
 			path = editpanel;
 			sourceTree = "<group>";
@@ -521,27 +580,36 @@
 				C16BFD552C156DDF00248FDF /* CommonButton.swift in Sources */,
 				C1BF5A4B2C1039810082FE31 /* DatabaseService.swift in Sources */,
 				C1BF5A492C10375B0082FE31 /* NetworkService.swift in Sources */,
+				C1BD30762C7B340000A736E1 /* EditMenuView.swift in Sources */,
 				C12DBBCF2C76FCCF0067E9F7 /* NewDoctorView.swift in Sources */,
+				C1BD30782C7B352D00A736E1 /* EditPanelItem.swift in Sources */,
 				C1C363322C73002A00D5E5EA /* BillView.swift in Sources */,
 				C1BF5A472C1037260082FE31 /* Notification.swift in Sources */,
 				C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */,
+				C1B3800A2C7B267100DF0CED /* ViewExtensions.swift in Sources */,
+				C1B380032C7B084B00DF0CED /* MenuItemRowView.swift in Sources */,
 				C1C3633A2C73326300D5E5EA /* MyCardView.swift in Sources */,
 				C1BF5A252C1034670082FE31 /* SwiftUIWithMVVMApp.swift in Sources */,
 				C1B0A5822C74908400DB3BE2 /* DoctorModel.swift in Sources */,
 				C1C25D752C10425E00EB2729 /* NotificationViewModel.swift in Sources */,
+				C1B380062C7B23D400DF0CED /* ToastView.swift in Sources */,
 				C1B0A5802C748F8300DB3BE2 /* DoctorsResponse.swift in Sources */,
 				C12DBBDD2C7742160067E9F7 /* CommonRadioButtonView.swift in Sources */,
 				C1B0A57A2C745C8000DB3BE2 /* SettingsViewModel.swift in Sources */,
+				C1B380002C7B04C400DF0CED /* MenuItem.swift in Sources */,
 				C1C25D792C1044C100EB2729 /* DashboardView.swift in Sources */,
 				C1BF5A412C1036050082FE31 /* User.swift in Sources */,
 				C1C3632A2C72FBAB00D5E5EA /* SettingsView.swift in Sources */,
+				C1B380082C7B263A00DF0CED /* ToastModifier.swift in Sources */,
 				C12DBBD92C7737260067E9F7 /* NewDoctorViewModel.swift in Sources */,
+				C1BD307A2C7B35EA00A736E1 /* EditPanelItemRowView.swift in Sources */,
 				C12DBBDB2C773EEB0067E9F7 /* CommonButtonView.swift in Sources */,
 				C1C363342C73003A00D5E5EA /* SupTPView.swift in Sources */,
 				C1C25D712C103D5900EB2729 /* LoginViewModel.swift in Sources */,
 				C1C25D772C10435000EB2729 /* LoginView.swift in Sources */,
 				C12DBBD52C77334E0067E9F7 /* NavState.swift in Sources */,
 				C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */,
+				C1B37FFD2C7B024A00DF0CED /* MainMenuView.swift in Sources */,
 				C1C25D732C1041BA00EB2729 /* DashboardViewModel.swift in Sources */,
 				C1C363382C7305A000D5E5EA /* InfoItem.swift in Sources */,
 				C16BFD572C15B06800248FDF /* DashboardMEItem.swift in Sources */,
@@ -687,6 +755,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -716,6 +785,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

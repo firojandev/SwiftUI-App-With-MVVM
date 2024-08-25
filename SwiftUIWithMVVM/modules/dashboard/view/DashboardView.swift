@@ -95,7 +95,7 @@ struct DashboardView: View {
             }
             
             Button(action: {
-                print("menu")
+                navigate(to: NavRoute.MainMenu)
             }) {
                 Image(systemName: "line.horizontal.3")
             }
@@ -114,23 +114,7 @@ struct DashboardView: View {
     }
     
     private func navigate(to route: NavRoute) {
-        if #available(iOS 16.0, *) {
-            navState.path.append(route)
-        } else {
-            // Handle navigation for iOS versions before 16
-            // This part could involve different navigation logic or using NavigationLink if necessary
-            // For simplicity, you might need to update this based on your specific needs
-            switch route {
-            case .newDoctorView:
-                // Navigate to NewDoctorView (e.g., manually update view state or present a sheet)
-                break
-            case .settings:
-                // Navigate to SettingsView (e.g., manually update view state or present a sheet)
-                break
-            default:
-                break
-            }
-        }
+        navState.path.append(route)
     }
 }
 

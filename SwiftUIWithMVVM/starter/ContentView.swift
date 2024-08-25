@@ -15,60 +15,39 @@ struct ContentView: View {
     @State private var isNavigatingToLogin = false
     
     var body: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack(path: $navState.path) {
-                VStack {
-                    if loginViewModel.isLoggedIn {
-                        DashboardView().navigationBarBackButtonHidden(true)
-                    } else {
-                        LoginView().navigationBarBackButtonHidden(true)
-                    }
-                }
-                .navigationDestination(for: NavRoute.self) { destination in
-                    switch destination {
-                    case .loginView:
-                        LoginView().navigationBarBackButtonHidden(true)
-                    case .dashboardView:
-                        DashboardView().navigationBarBackButtonHidden(true)
-                    case .settings:
-                        SettingsView()
-                    case .changePassword(let info):
-                        ChangePasswordView(info: info)
-                    case .supTP(let info):
-                        SupTPView(info: info)
-                    case .bill(let info):
-                        BillView(info: info)
-                    case .newDoctorView:
-                        NewDoctorView()
-                    }
+        NavigationStack(path: $navState.path) {
+            VStack {
+                if loginViewModel.isLoggedIn {
+                    DashboardView().navigationBarBackButtonHidden(true)
+                } else {
+                    LoginView().navigationBarBackButtonHidden(true)
                 }
             }
-            .onAppear {
-                loginViewModel.checkLogin()
-            }
-        } else {
-            // For iOS versions before 16
-            NavigationView {
-                VStack {
-                    if loginViewModel.isLoggedIn {
-                        DashboardView()
-                            .transition(.opacity) // Optional: use transitions for smoother view changes
-                            .onAppear {
-                                // Handle transitions based on your navigation state
-                            }
-                    } else {
-                        LoginView()
-                            .transition(.opacity) // Optional: use transitions for smoother view changes
-                            .onAppear {
-                                // Handle transitions based on your navigation state
-                            }
-                    }
+            .navigationDestination(for: NavRoute.self) { destination in
+                switch destination {
+                case .loginView:
+                    LoginView().navigationBarBackButtonHidden(true)
+                case .dashboardView:
+                    DashboardView().navigationBarBackButtonHidden(true)
+                case .settings:
+                    SettingsView()
+                case .changePassword(let info):
+                    ChangePasswordView(info: info)
+                case .MainMenu:
+                    MainMenuView()
+                case .supTP(let info):
+                    SupTPView(info: info)
+                case .bill(let info):
+                    BillView(info: info)
+                case .newDoctorView:
+                    NewDoctorView()
+                case .EditPanelView:
+                    EditMenuView()
                 }
-                .navigationBarHidden(true) // Optional: hide navigation bar if not needed
             }
-            .onAppear {
-                loginViewModel.checkLogin()
-            }
+        }
+        .onAppear {
+            loginViewModel.checkLogin()
         }
     }
 }
