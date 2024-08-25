@@ -40,13 +40,21 @@ struct NewDoctorView: View {
                                                         get: { viewModel.selectedShift == "Morning" },
                                                         set: { if $0 { viewModel.selectedShift = "Morning" } }
                                                     )) {
-                                                        viewModel.selectedShift = "Morning"
+                                                        if viewModel.selectedShift == "Morning" {
+                                                            viewModel.selectedShift = ""
+                                                        } else {
+                                                            viewModel.selectedShift = "Morning"
+                                                        }
                                                     }
                             CommonRadioButtonView(title: "Evening", isSelected:  Binding(
                                 get: { viewModel.selectedShift == "Evening" },
                                 set: { if $0 { viewModel.selectedShift = "Evening" } }
                             )) {
-                                viewModel.selectedShift = "Evening"
+                                if viewModel.selectedShift == "Evening" {
+                                    viewModel.selectedShift = ""
+                                } else {
+                                    viewModel.selectedShift = "Evening"
+                                }
                             }
                             
                         }
