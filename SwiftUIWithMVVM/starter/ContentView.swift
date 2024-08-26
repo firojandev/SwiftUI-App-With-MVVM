@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @EnvironmentObject var loginViewModel: LoginViewModel
     @EnvironmentObject var navState: NavState
-    
-    @State private var isNavigatingToDashboard = false
-    @State private var isNavigatingToLogin = false
     
     var body: some View {
         NavigationStack(path: $navState.path) {

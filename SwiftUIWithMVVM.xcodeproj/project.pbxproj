@@ -14,6 +14,7 @@
 		C121D7AE2C7C423D001E5448 /* MioTpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7AD2C7C423D001E5448 /* MioTpView.swift */; };
 		C121D7B12C7C4878001E5448 /* ColleageTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7B02C7C4878001E5448 /* ColleageTP.swift */; };
 		C121D7B52C7C5536001E5448 /* MioTpRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7B42C7C5536001E5448 /* MioTpRowView.swift */; };
+		C12C222E2C7C878300894CEA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12C222D2C7C878300894CEA /* NetworkMonitor.swift */; };
 		C12DBBCF2C76FCCF0067E9F7 /* NewDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBCE2C76FCCF0067E9F7 /* NewDoctorView.swift */; };
 		C12DBBD52C77334E0067E9F7 /* NavState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBD42C77334E0067E9F7 /* NavState.swift */; };
 		C12DBBD72C77336E0067E9F7 /* NavRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBD62C77336E0067E9F7 /* NavRoute.swift */; };
@@ -68,6 +69,7 @@
 		C121D7AD2C7C423D001E5448 /* MioTpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MioTpView.swift; sourceTree = "<group>"; };
 		C121D7B02C7C4878001E5448 /* ColleageTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleageTP.swift; sourceTree = "<group>"; };
 		C121D7B42C7C5536001E5448 /* MioTpRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MioTpRowView.swift; sourceTree = "<group>"; };
+		C12C222D2C7C878300894CEA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		C12DBBCE2C76FCCF0067E9F7 /* NewDoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDoctorView.swift; sourceTree = "<group>"; };
 		C12DBBD42C77334E0067E9F7 /* NavState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavState.swift; sourceTree = "<group>"; };
 		C12DBBD62C77336E0067E9F7 /* NavRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRoute.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				C1BF5A482C10375B0082FE31 /* NetworkService.swift */,
+				C12C222D2C7C878300894CEA /* NetworkMonitor.swift */,
 			);
 			path = networking;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				C1C363342C73003A00D5E5EA /* SupTPView.swift in Sources */,
 				C1C25D712C103D5900EB2729 /* LoginViewModel.swift in Sources */,
 				C1C25D772C10435000EB2729 /* LoginView.swift in Sources */,
+				C12C222E2C7C878300894CEA /* NetworkMonitor.swift in Sources */,
 				C12DBBD52C77334E0067E9F7 /* NavState.swift in Sources */,
 				C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */,
 				C1B37FFD2C7B024A00DF0CED /* MainMenuView.swift in Sources */,

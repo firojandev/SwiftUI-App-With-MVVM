@@ -12,6 +12,8 @@ import CoreData
 struct SwiftUIWithMVVMApp: App {
     @StateObject private var navState = NavState()
     
+    @StateObject private var networkMonitor = NetworkMonitor()
+    
     let persistentContainer = NSPersistentContainer(name: "Model")
     
     @StateObject private var loginViewModel = LoginViewModel()
@@ -30,6 +32,7 @@ struct SwiftUIWithMVVMApp: App {
                 .environmentObject(navState)
                 .environmentObject(loginViewModel)
                 .environment(\.managedObjectContext, persistentContainer.viewContext)
+                .environmentObject(networkMonitor)
         }
     }
 }

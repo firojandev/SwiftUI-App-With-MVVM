@@ -11,11 +11,15 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @EnvironmentObject var networkMonitor: NetworkMonitor
+    
     @ObservedObject var viewModel = LoginViewModel()
     
     @EnvironmentObject var navState: NavState
     
     @State private var rememberMe = false
+    
+    @State private var showToast = false
     
     var body: some View {
             ScrollView {
@@ -64,7 +68,14 @@ struct LoginView: View {
                         }
                         
                         Button(action: {
-                            viewModel.login()
+                            if networkMonitor.isConnected {
+                                viewModel.login()
+                                showToast = false
+                            }else{
+                                print("Not connected")
+                                showToast = true
+                            }
+                           
                         }) {
                             Text("Login")
                                 .fontWeight(.bold)
@@ -74,6 +85,7 @@ struct LoginView: View {
                                 .background(Color.blue)
                                 .cornerRadius(8)
                         }
+                        .toast(isShowing:$showToast, message: "Not connected")
                         
                         Text("Version 1.0.0")
                             .font(.footnote)
@@ -95,7 +107,6 @@ struct LoginView: View {
                     navState.path.append(NavRoute.dashboardView)
                 }
             }
-    
     }
 }
 
