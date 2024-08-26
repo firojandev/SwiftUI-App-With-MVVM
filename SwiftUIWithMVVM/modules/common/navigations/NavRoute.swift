@@ -18,4 +18,6 @@ enum NavRoute:Hashable {
     case bill(InfoItem)
     case newDoctorView
     case EditPanelView
+    case TpColleagueView
+    case MioTpView
 }

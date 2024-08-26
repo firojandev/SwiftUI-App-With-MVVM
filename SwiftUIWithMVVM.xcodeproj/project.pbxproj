@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C121D7A52C7C2A34001E5448 /* TPColleagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7A42C7C2A34001E5448 /* TPColleagesView.swift */; };
+		C121D7A82C7C2C5E001E5448 /* TpColleageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7A72C7C2C5E001E5448 /* TpColleageRowView.swift */; };
+		C121D7AA2C7C30EA001E5448 /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7A92C7C30EA001E5448 /* TextExtensions.swift */; };
+		C121D7AC2C7C33EC001E5448 /* ColleageueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7AB2C7C33EC001E5448 /* ColleageueModel.swift */; };
+		C121D7AE2C7C423D001E5448 /* MioTpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7AD2C7C423D001E5448 /* MioTpView.swift */; };
+		C121D7B12C7C4878001E5448 /* ColleageTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7B02C7C4878001E5448 /* ColleageTP.swift */; };
+		C121D7B52C7C5536001E5448 /* MioTpRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7B42C7C5536001E5448 /* MioTpRowView.swift */; };
 		C12DBBCF2C76FCCF0067E9F7 /* NewDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBCE2C76FCCF0067E9F7 /* NewDoctorView.swift */; };
 		C12DBBD52C77334E0067E9F7 /* NavState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBD42C77334E0067E9F7 /* NavState.swift */; };
 		C12DBBD72C77336E0067E9F7 /* NavRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12DBBD62C77336E0067E9F7 /* NavRoute.swift */; };
@@ -54,6 +61,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C121D7A42C7C2A34001E5448 /* TPColleagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPColleagesView.swift; sourceTree = "<group>"; };
+		C121D7A72C7C2C5E001E5448 /* TpColleageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TpColleageRowView.swift; sourceTree = "<group>"; };
+		C121D7A92C7C30EA001E5448 /* TextExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtensions.swift; sourceTree = "<group>"; };
+		C121D7AB2C7C33EC001E5448 /* ColleageueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleageueModel.swift; sourceTree = "<group>"; };
+		C121D7AD2C7C423D001E5448 /* MioTpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MioTpView.swift; sourceTree = "<group>"; };
+		C121D7B02C7C4878001E5448 /* ColleageTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleageTP.swift; sourceTree = "<group>"; };
+		C121D7B42C7C5536001E5448 /* MioTpRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MioTpRowView.swift; sourceTree = "<group>"; };
 		C12DBBCE2C76FCCF0067E9F7 /* NewDoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDoctorView.swift; sourceTree = "<group>"; };
 		C12DBBD42C77334E0067E9F7 /* NavState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavState.swift; sourceTree = "<group>"; };
 		C12DBBD62C77336E0067E9F7 /* NavRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRoute.swift; sourceTree = "<group>"; };
@@ -112,6 +126,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C121D7AF2C7C4863001E5448 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C1BD30772C7B352D00A736E1 /* EditPanelItem.swift */,
+				C121D7AB2C7C33EC001E5448 /* ColleageueModel.swift */,
+				C121D7B02C7C4878001E5448 /* ColleageTP.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C121D7B22C7C48ED001E5448 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C121D7B32C7C4933001E5448 /* itemrow */,
+				C121D7A42C7C2A34001E5448 /* TPColleagesView.swift */,
+				C1BD30752C7B340000A736E1 /* EditMenuView.swift */,
+				C121D7AD2C7C423D001E5448 /* MioTpView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C121D7B32C7C4933001E5448 /* itemrow */ = {
+			isa = PBXGroup;
+			children = (
+				C121D7A72C7C2C5E001E5448 /* TpColleageRowView.swift */,
+				C1BD30792C7B35EA00A736E1 /* EditPanelItemRowView.swift */,
+				C121D7B42C7C5536001E5448 /* MioTpRowView.swift */,
+			);
+			path = itemrow;
+			sourceTree = "<group>";
+		};
 		C12DBBCA2C76ED050067E9F7 /* newdcr */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +380,7 @@
 			children = (
 				C132C10A2C1165C100860B27 /* ColorExtensions.swift */,
 				C1B380092C7B267100DF0CED /* ViewExtensions.swift */,
+				C121D7A92C7C30EA001E5448 /* TextExtensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -470,9 +516,6 @@
 			children = (
 				C1C3632E2C72FFEB00D5E5EA /* dvr */,
 				C1C3632D2C72FFE100D5E5EA /* tp */,
-				C1BD30752C7B340000A736E1 /* EditMenuView.swift */,
-				C1BD30772C7B352D00A736E1 /* EditPanelItem.swift */,
-				C1BD30792C7B35EA00A736E1 /* EditPanelItemRowView.swift */,
 			);
 			path = editpanel;
 			sourceTree = "<group>";
@@ -480,6 +523,8 @@
 		C1C3632D2C72FFE100D5E5EA /* tp */ = {
 			isa = PBXGroup;
 			children = (
+				C121D7B22C7C48ED001E5448 /* view */,
+				C121D7AF2C7C4863001E5448 /* model */,
 			);
 			path = tp;
 			sourceTree = "<group>";
@@ -582,12 +627,15 @@
 				C1BF5A492C10375B0082FE31 /* NetworkService.swift in Sources */,
 				C1BD30762C7B340000A736E1 /* EditMenuView.swift in Sources */,
 				C12DBBCF2C76FCCF0067E9F7 /* NewDoctorView.swift in Sources */,
+				C121D7AC2C7C33EC001E5448 /* ColleageueModel.swift in Sources */,
+				C121D7A82C7C2C5E001E5448 /* TpColleageRowView.swift in Sources */,
 				C1BD30782C7B352D00A736E1 /* EditPanelItem.swift in Sources */,
 				C1C363322C73002A00D5E5EA /* BillView.swift in Sources */,
 				C1BF5A472C1037260082FE31 /* Notification.swift in Sources */,
 				C1BF5A272C1034670082FE31 /* ContentView.swift in Sources */,
 				C1B3800A2C7B267100DF0CED /* ViewExtensions.swift in Sources */,
 				C1B380032C7B084B00DF0CED /* MenuItemRowView.swift in Sources */,
+				C121D7AE2C7C423D001E5448 /* MioTpView.swift in Sources */,
 				C1C3633A2C73326300D5E5EA /* MyCardView.swift in Sources */,
 				C1BF5A252C1034670082FE31 /* SwiftUIWithMVVMApp.swift in Sources */,
 				C1B0A5822C74908400DB3BE2 /* DoctorModel.swift in Sources */,
@@ -595,15 +643,19 @@
 				C1B380062C7B23D400DF0CED /* ToastView.swift in Sources */,
 				C1B0A5802C748F8300DB3BE2 /* DoctorsResponse.swift in Sources */,
 				C12DBBDD2C7742160067E9F7 /* CommonRadioButtonView.swift in Sources */,
+				C121D7AA2C7C30EA001E5448 /* TextExtensions.swift in Sources */,
 				C1B0A57A2C745C8000DB3BE2 /* SettingsViewModel.swift in Sources */,
+				C121D7A52C7C2A34001E5448 /* TPColleagesView.swift in Sources */,
 				C1B380002C7B04C400DF0CED /* MenuItem.swift in Sources */,
 				C1C25D792C1044C100EB2729 /* DashboardView.swift in Sources */,
 				C1BF5A412C1036050082FE31 /* User.swift in Sources */,
+				C121D7B12C7C4878001E5448 /* ColleageTP.swift in Sources */,
 				C1C3632A2C72FBAB00D5E5EA /* SettingsView.swift in Sources */,
 				C1B380082C7B263A00DF0CED /* ToastModifier.swift in Sources */,
 				C12DBBD92C7737260067E9F7 /* NewDoctorViewModel.swift in Sources */,
 				C1BD307A2C7B35EA00A736E1 /* EditPanelItemRowView.swift in Sources */,
 				C12DBBDB2C773EEB0067E9F7 /* CommonButtonView.swift in Sources */,
+				C121D7B52C7C5536001E5448 /* MioTpRowView.swift in Sources */,
 				C1C363342C73003A00D5E5EA /* SupTPView.swift in Sources */,
 				C1C25D712C103D5900EB2729 /* LoginViewModel.swift in Sources */,
 				C1C25D772C10435000EB2729 /* LoginView.swift in Sources */,

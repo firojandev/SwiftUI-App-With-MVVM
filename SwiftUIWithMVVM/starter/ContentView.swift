@@ -43,6 +43,11 @@ struct ContentView: View {
                     NewDoctorView()
                 case .EditPanelView:
                     EditMenuView()
+                case .TpColleagueView:
+                    TPColleagesView()
+                case .MioTpView:
+                    MioTpView()
+                    
                 }
             }
         }

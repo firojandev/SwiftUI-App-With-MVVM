@@ -35,7 +35,6 @@ struct EditMenuView: View {
         EditPanelItem(imageName: "list", title: "Bill",code: EditPanelCode.Bill),
         EditPanelItem(imageName: "agent", title: "Promotional Item",code: EditPanelCode.PI),
         EditPanelItem(imageName: "ic_day_sample_summery", title: "Events",code: EditPanelCode.Ev),
-    
     ]
     
     var body: some View {
@@ -47,9 +46,9 @@ struct EditMenuView: View {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 110))]) {
                         ForEach(gridItems) { item in
                             EditPanelItemRowView(item: item, userAction:{
-                                //menuOption(code: item.code)
-                                showingToast = true
-                                toastMessage = item.title
+                                menuOption(code: item.code)
+//                                showingToast = true
+//                                toastMessage = item.title
                                 
                             })
                         }
@@ -67,7 +66,7 @@ struct EditMenuView: View {
     func menuOption(code:EditPanelCode) {
         switch (code) {
         case .TP:
-            EmptyView()
+            navState.path.append(NavRoute.TpColleagueView)
         case .CTP:
             EmptyView()
         case .PWDS:
