@@ -8,13 +8,8 @@
 import SwiftUI
 
 struct SupTPView: View {
+    var info: InfoItem
     var body: some View {
-        Text("Hello, SupTPView!")
-    }
-}
-
-struct SupTPView_Previews: PreviewProvider {
-    static var previews: some View {
-        SupTPView()
+        Text("Hello, \(info.info)")
     }
 }

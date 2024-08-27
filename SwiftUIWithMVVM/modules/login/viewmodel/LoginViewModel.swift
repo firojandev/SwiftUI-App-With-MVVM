@@ -10,8 +10,8 @@ import Combine
 
 class LoginViewModel: ObservableObject {
     
-    @Published var username = ""
-    @Published var password = ""
+    @Published var username = AppConstants.testUserId
+    @Published var password = AppConstants.testPassword
     
     @Published var isLoggedIn = false
     @Published var errorMessage:String?
@@ -21,8 +21,10 @@ class LoginViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     func checkLogin() {
+        print("Is calling")
         let user = DatabaseService.shared.getUser()
         if user != nil {
+            print("Is called")
             self.isLoggedIn = true
         }
     }

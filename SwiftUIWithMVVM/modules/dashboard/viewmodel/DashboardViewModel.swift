@@ -10,16 +10,16 @@ import Foundation
 class DashboardViewModel: ObservableObject {
     
     @Published var isLogout = false
-
-   // @Published var empName: String
     
-
-//    init(){
-//        let user = DatabaseService.shared.getUser()
-//
-//        self.empName = user?.empName ?? "Guest"
-//
-//    }
+    // @Published var empName: String
+    
+    
+    //    init(){
+    //        let user = DatabaseService.shared.getUser()
+    //
+    //        self.empName = user?.empName ?? "Guest"
+    //
+    //    }
     
     func willLogout(){
         DatabaseService.shared.clearUserData()

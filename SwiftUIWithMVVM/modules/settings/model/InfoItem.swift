@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct InfoItem: Identifiable {
+struct InfoItem: Identifiable,Hashable {
     let id = UUID()
     let info: String
 }

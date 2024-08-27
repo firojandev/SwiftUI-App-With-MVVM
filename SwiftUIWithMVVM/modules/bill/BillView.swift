@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct BillView: View {
+    
+    var info: InfoItem
+    
     var body: some View {
         Text("Hello, BillView!")
     }
 }
 
-struct BillView_Previews: PreviewProvider {
-    static var previews: some View {
-        BillView()
-    }
-}

@@ -8,13 +8,9 @@
 import SwiftUI
 
 struct ChangePasswordView: View {
+    var info: InfoItem
     var body: some View {
-        Text("Change PasswordView")
+        Text("Change PasswordView \(info.info)")
     }
 }
 
-struct ChangePasswordView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChangePasswordView()
-    }
-}
