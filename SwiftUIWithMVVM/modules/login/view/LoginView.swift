@@ -87,6 +87,7 @@ struct LoginView: View {
                         }
                         .toast(isShowing:$showToast, message: "Not connected")
                         
+                        
                         Text("Version 1.0.0")
                             .font(.footnote)
                             .foregroundColor(.gray)
