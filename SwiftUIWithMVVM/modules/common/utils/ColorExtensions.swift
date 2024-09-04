@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 extension Color {
-    
+    static let ColorLightGray = Color("ColorLightGray")
+    static let ColorLightViolet = Color("ColorLightViolet")
     static let colorLimeLight = Color("ColorLimeLight")
     static let customGreenLight = Color("ColorGreenLight")
     static let customGreenMedium = Color("ColorGreenMedium")

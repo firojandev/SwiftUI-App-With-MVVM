@@ -25,6 +25,8 @@
 		C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */; };
 		C16BFD552C156DDF00248FDF /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BFD542C156DDF00248FDF /* CommonButton.swift */; };
 		C16BFD572C15B06800248FDF /* DashboardMEItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BFD562C15B06800248FDF /* DashboardMEItem.swift */; };
+		C19B9A7D2C8813A5009BEFE3 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19B9A7C2C8813A5009BEFE3 /* ReportView.swift */; };
+		C19B9A7F2C8813C9009BEFE3 /* ReportRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19B9A7E2C8813C9009BEFE3 /* ReportRow.swift */; };
 		C1B0A5782C744BB600DB3BE2 /* SettingsViewBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A5772C744BB600DB3BE2 /* SettingsViewBackup.swift */; };
 		C1B0A57A2C745C8000DB3BE2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A5792C745C8000DB3BE2 /* SettingsViewModel.swift */; };
 		C1B0A57C2C747EF100DB3BE2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0A57B2C747EF100DB3BE2 /* AppConstants.swift */; };
@@ -80,6 +82,8 @@
 		C132C10C2C116C8B00860B27 /* DashboardCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCardItem.swift; sourceTree = "<group>"; };
 		C16BFD542C156DDF00248FDF /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
 		C16BFD562C15B06800248FDF /* DashboardMEItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardMEItem.swift; sourceTree = "<group>"; };
+		C19B9A7C2C8813A5009BEFE3 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		C19B9A7E2C8813C9009BEFE3 /* ReportRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportRow.swift; sourceTree = "<group>"; };
 		C1B0A5772C744BB600DB3BE2 /* SettingsViewBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewBackup.swift; sourceTree = "<group>"; };
 		C1B0A5792C745C8000DB3BE2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		C1B0A57B2C747EF100DB3BE2 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -211,6 +215,39 @@
 			path = navigations;
 			sourceTree = "<group>";
 		};
+		C19B9A782C8812B8009BEFE3 /* reports */ = {
+			isa = PBXGroup;
+			children = (
+				C19B9A7B2C881304009BEFE3 /* model */,
+				C19B9A7A2C8812F5009BEFE3 /* viewmodel */,
+				C19B9A792C8812ED009BEFE3 /* view */,
+			);
+			path = reports;
+			sourceTree = "<group>";
+		};
+		C19B9A792C8812ED009BEFE3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C19B9A7C2C8813A5009BEFE3 /* ReportView.swift */,
+				C19B9A7E2C8813C9009BEFE3 /* ReportRow.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C19B9A7A2C8812F5009BEFE3 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		C19B9A7B2C881304009BEFE3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		C1B0A57D2C748F6000DB3BE2 /* doctors */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +340,7 @@
 		C1BF5A322C1034CB0082FE31 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				C19B9A782C8812B8009BEFE3 /* reports */,
 				C1B37FFB2C7B023300DF0CED /* mainmenu */,
 				C12DBBCA2C76ED050067E9F7 /* newdcr */,
 				C1B0A57D2C748F6000DB3BE2 /* doctors */,
@@ -666,6 +704,7 @@
 				C12DBBD52C77334E0067E9F7 /* NavState.swift in Sources */,
 				C132C10D2C116C8B00860B27 /* DashboardCardItem.swift in Sources */,
 				C1B37FFD2C7B024A00DF0CED /* MainMenuView.swift in Sources */,
+				C19B9A7D2C8813A5009BEFE3 /* ReportView.swift in Sources */,
 				C1C25D732C1041BA00EB2729 /* DashboardViewModel.swift in Sources */,
 				C1C363382C7305A000D5E5EA /* InfoItem.swift in Sources */,
 				C16BFD572C15B06800248FDF /* DashboardMEItem.swift in Sources */,
@@ -674,6 +713,7 @@
 				C132C10B2C1165C100860B27 /* ColorExtensions.swift in Sources */,
 				C12DBBD72C77336E0067E9F7 /* NavRoute.swift in Sources */,
 				C1C363362C73006000D5E5EA /* ChangePasswordView.swift in Sources */,
+				C19B9A7F2C8813C9009BEFE3 /* ReportRow.swift in Sources */,
 				C1B0A5852C749AFC00DB3BE2 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

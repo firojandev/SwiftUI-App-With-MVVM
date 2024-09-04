@@ -94,6 +94,7 @@ struct MioTpView: View {
             ToolbarItem(placement: .navigationBarTrailing){
                 Button(action: {
                     print("Approve action here")
+                    navState.path.append(NavRoute.ReportView)
                 }) {
                     Text("Approve")
                 }

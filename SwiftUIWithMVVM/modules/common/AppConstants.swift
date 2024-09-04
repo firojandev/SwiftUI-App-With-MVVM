@@ -16,7 +16,7 @@ struct AppConstants {
     
     static let environment:APIEnvironment = .development
     
-    static let devApiURL = "http://ip/DCRService.svc/Json"
+    static let devApiURL = "http://ip.com/DCRService.svc/Json"
     static let productionApiURL = ""
 
     static let login = "Login"

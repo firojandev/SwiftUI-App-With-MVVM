@@ -12,4 +12,9 @@ extension View {
     func toast(isShowing: Binding<Bool>, message: String) -> some View {
         self.modifier(ToastModifier(isShowing: isShowing, message: message))
     }
+    
+    func customBackgroundOne(color:Color) -> some View {
+           self.background(color)
+    }
+
 }

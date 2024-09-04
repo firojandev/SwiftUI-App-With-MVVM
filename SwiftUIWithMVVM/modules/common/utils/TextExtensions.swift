@@ -20,4 +20,18 @@ extension Text {
         self
             .font(.caption)
     }
+    
+    
+    func textLabel() -> some View {
+        self
+            .font(.caption)
+            .foregroundColor(Color.gray)
+    }
+    
+    func textValue() -> some View {
+        self
+            .font(.footnote)
+            .foregroundColor(Color.black)
+    }
+    
 }

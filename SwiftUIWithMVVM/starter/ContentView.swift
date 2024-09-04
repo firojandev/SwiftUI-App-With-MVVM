@@ -45,6 +45,8 @@ struct ContentView: View {
                     TPColleagesView()
                 case .MioTpView:
                     MioTpView()
+                case .ReportView:
+                    ReportView()
                     
                 }
             }

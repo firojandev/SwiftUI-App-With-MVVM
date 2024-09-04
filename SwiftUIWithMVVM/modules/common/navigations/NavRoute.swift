@@ -20,4 +20,5 @@ enum NavRoute:Hashable {
     case EditPanelView
     case TpColleagueView
     case MioTpView
+    case ReportView
 }
