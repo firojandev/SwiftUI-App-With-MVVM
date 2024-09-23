@@ -99,6 +99,21 @@ struct LoginView: View {
                     .padding(.horizontal, 20)
                     
                     Spacer()
+                    
+                    HStack {
+                        Link("Privacy Policy", destination: URL(string: "https://your-privacy-url.com")!)
+                            .font(.footnote)
+                            .foregroundColor(.blue)
+                        
+                        Spacer()
+                        
+                        Link("Terms & Conditions", destination: URL(string: "https://your-terms-url.com")!)
+                            .font(.footnote)
+                            .foregroundColor(.blue)
+                    }
+                    .padding(.horizontal,20)
+                    .padding(.top,8)
+                    
                 }
             }
             .background(Color(.systemGray5).edgesIgnoringSafeArea(.all))
